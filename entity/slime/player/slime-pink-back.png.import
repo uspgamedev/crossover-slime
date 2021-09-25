@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slime-pink-back.png-c77adefaa5ef1dc40a0d9ffa1731310d.stex"
+path="res://.import/slime-pink-back.png-e9a443a1990ddf37bb06c580718727d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/slime/slime-pink-back.png"
-dest_files=[ "res://.import/slime-pink-back.png-c77adefaa5ef1dc40a0d9ffa1731310d.stex" ]
+source_file="res://entity/slime/player/slime-pink-back.png"
+dest_files=[ "res://.import/slime-pink-back.png-e9a443a1990ddf37bb06c580718727d0.stex" ]
 
 [params]
 

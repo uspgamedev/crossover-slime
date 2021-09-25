@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slime-pink-side1-idle-2.png-f93b89abc38305d00f6e2667cf19bf47.stex"
+path="res://.import/slime-fire-side2-idle-2.png-6c1cd7ff6db584b1886a508441e4f9a1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/slime/slime-pink-side1-idle-2.png"
-dest_files=[ "res://.import/slime-pink-side1-idle-2.png-f93b89abc38305d00f6e2667cf19bf47.stex" ]
+source_file="res://entity/slime/fire_slime/slime-fire-side2-idle-2.png"
+dest_files=[ "res://.import/slime-fire-side2-idle-2.png-6c1cd7ff6db584b1886a508441e4f9a1.stex" ]
 
 [params]
 
