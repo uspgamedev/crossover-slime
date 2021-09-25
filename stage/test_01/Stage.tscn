@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://stage/Stage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entity/rock/Rock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entity/slime/Slime.tscn" type="PackedScene" id=4]
 
 [node name="Stage" instance=ExtResource( 1 )]
 player_path = NodePath("Player")
@@ -12,3 +13,6 @@ tile = Vector2( 3, 3 )
 
 [node name="Rock" parent="." index="2" instance=ExtResource( 3 )]
 tile = Vector2( 5, 3 )
+
+[node name="Slime" parent="." index="3" instance=ExtResource( 4 )]
+tile = Vector2( 3, 5 )

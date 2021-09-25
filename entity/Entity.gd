@@ -1,7 +1,7 @@
 class_name Entity extends Node2D
 
 const GROUP := "entity"
-const MOVING_THRESHOLD := 12*12
+const MOVING_THRESHOLD := 10*10
 
 export var tile := Vector2.ZERO
 export var SMOOTH := 6

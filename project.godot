@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Property",
+"class": "Absorbable",
+"language": "GDScript",
+"path": "res://property/absorbable/Absorbable.gd"
+}, {
 "base": "Node2D",
 "class": "Entity",
 "language": "GDScript",
@@ -30,6 +35,7 @@ _global_script_classes=[ {
 "path": "res://stage/Stage.gd"
 } ]
 _global_script_class_icons={
+"Absorbable": "",
 "Entity": "",
 "Movable": "",
 "Property": "",
