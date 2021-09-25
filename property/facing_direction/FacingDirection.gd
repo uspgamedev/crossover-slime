@@ -26,7 +26,7 @@ func _handle_effect(_stage: Stage, _entity: Entity, effect: Dictionary):
 			facing = closest_dir(dir)
 
 func closest_dir(dir: Vector2) -> int:
-	var maxalign := -1
+	var maxalign := -1.0
 	var closest := -1
 	for i in DIRS.size():
 		var v = DIRS[i]

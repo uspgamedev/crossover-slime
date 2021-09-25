@@ -7,5 +7,5 @@ func _handle_effect(_stage: Stage, entity: Entity, effect: Dictionary):
 		{ "type": "gain_power", "power": var power }:
 			if current_power != null:
 				current_power.free()
-			current_power = power.new()
+			current_power = power
 			entity.add_child(current_power)

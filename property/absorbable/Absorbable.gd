@@ -1,6 +1,6 @@
 class_name Absorbable extends Property
 
-export var power_property: Script
+export var power_property_scn: PackedScene
 
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 	match effect:
@@ -9,6 +9,6 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				effect.blocked = false
 				stage.apply_effect(other, {
 					type = "gain_power",
-					power = power_property
+					power = power_property_scn.instance()
 				})
 				entity.queue_free()
