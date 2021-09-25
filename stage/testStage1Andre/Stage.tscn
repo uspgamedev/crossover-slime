@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://stage/Stage.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entity/slime/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entity/rock/Rock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entity/slime/fire_slime/FireSlime.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entity/trunk/Trunk.tscn" type="PackedScene" id=5]
+
+[node name="Stage" instance=ExtResource( 1 )]
+player_path = NodePath("Player")
+
+[node name="Map" parent="." index="0"]
+tile_data = PoolIntArray( -65530, 4, 0, -65529, 4, 0, -65528, 4, 0, -65527, 4, 0, -65526, 4, 0, 6, 4, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 4, 0, 65547, 4, 0, 131077, 4, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 4, 0, 196613, 4, 0, 196614, 0, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 0, 0, 196619, 4, 0, 262149, 4, 0, 262150, 0, 0, 262151, 4, 0, 262152, 4, 0, 262153, 4, 0, 262154, 0, 0, 262155, 4, 0, 262156, 4, 0, 262157, 4, 0, 262158, 4, 0, 262159, 4, 0, 327685, 4, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 4, 0, 458758, 4, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 4, 0, 524294, 4, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 4, 0, 589830, 4, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 4, 0, 655366, 4, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 4, 0, 655371, 4, 0, 655372, 4, 0, 655373, 4, 0, 655374, 4, 0, 655375, 4, 0, 720902, 4, 0, 720903, 4, 0, 720904, 4, 0, 720905, 4, 0, 720906, 4, 0 )
+
+[node name="Player" parent="." index="3" instance=ExtResource( 2 )]
+position = Vector2( 544, 672 )
+tile = Vector2( 8, 10 )
+
+[node name="FireSlime" parent="." index="4" instance=ExtResource( 4 )]
+position = Vector2( 800, 480 )
+tile = Vector2( 12, 7 )
+
+[node name="Trunk" parent="." index="5" instance=ExtResource( 5 )]
+position = Vector2( 416, 160 )
+tile = Vector2( 6, 2 )
+
+[node name="Trunk2" parent="." index="6" instance=ExtResource( 5 )]
+position = Vector2( 416, 224 )
+tile = Vector2( 6, 3 )
+
+[node name="Trunk3" parent="." index="7" instance=ExtResource( 5 )]
+position = Vector2( 416, 288 )
+tile = Vector2( 6, 4 )
+
+[node name="Trunk4" parent="." index="8" instance=ExtResource( 5 )]
+position = Vector2( 416, 352 )
+tile = Vector2( 6, 5 )
+
+[node name="Trunk5" parent="." index="9" instance=ExtResource( 5 )]
+position = Vector2( 672, 160 )
+tile = Vector2( 10, 2 )
+
+[node name="Trunk6" parent="." index="10" instance=ExtResource( 5 )]
+position = Vector2( 672, 224 )
+tile = Vector2( 10, 3 )
+
+[node name="Trunk8" parent="." index="11" instance=ExtResource( 5 )]
+position = Vector2( 672, 352 )
+tile = Vector2( 10, 5 )
+
+[node name="Rock" parent="." index="12" instance=ExtResource( 3 )]
+position = Vector2( 544, 96 )
+tile = Vector2( 8, 1 )
+
+[node name="Trunk7" parent="." index="13" instance=ExtResource( 5 )]
+position = Vector2( 672, 288 )
+tile = Vector2( 10, 4 )

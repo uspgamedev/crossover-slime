@@ -35,9 +35,14 @@ _global_script_classes=[ {
 "path": "res://property/flammable/Flammable.gd"
 }, {
 "base": "Property",
-"class": "Hazard",
+"class": "Gravity",
 "language": "GDScript",
-"path": "res://property/hazard/Hazard.gd"
+"path": "res://property/gravity/Gravity.gd"
+}, {
+"base": "TileMap",
+"class": "Map",
+"language": "GDScript",
+"path": "res://stage/Map.gd"
 }, {
 "base": "Property",
 "class": "Movable",
@@ -58,6 +63,11 @@ _global_script_classes=[ {
 "class": "Stage",
 "language": "GDScript",
 "path": "res://stage/Stage.gd"
+}, {
+"base": "Object",
+"class": "Tile",
+"language": "GDScript",
+"path": "res://util/Tile.gd"
 } ]
 _global_script_class_icons={
 "Absorbable": "",
@@ -65,11 +75,13 @@ _global_script_class_icons={
 "FacingDirection": "",
 "Fagocitosis": "",
 "Flammable": "",
-"Hazard": "",
+"Gravity": "",
+"Map": "",
 "Movable": "",
 "PoweredByEarth": "",
 "Property": "",
-"Stage": ""
+"Stage": "",
+"Tile": ""
 }
 
 [application]
