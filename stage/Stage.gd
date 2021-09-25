@@ -1,6 +1,8 @@
 tool
 class_name Stage extends YSort
 
+const FLOODFILL_DELAY := 0.1
+
 export var player_path := NodePath()
 export var map_path := NodePath()
 
@@ -30,6 +32,17 @@ func get_entity_at(tile: Vector2) -> Entity:
 
 func apply_effect(entity: Entity, effect: Dictionary):
 	match effect:
-		_:
-			pass
-	entity.apply_effect(self, effect)
+		{ "type": "splash", "at": var tile }:
+			floodfill(tile)
+	if entity != null:
+		entity.apply_effect(self, effect)
+
+func floodfill(tile: Vector2, delay := false):
+	if delay:
+		yield(get_tree().create_timer(FLOODFILL_DELAY), "timeout")
+	var tile_type := get_map().get_tile_type(tile)
+	if tile_type in Map.FILLABLE:
+		var filled_type := Map.FILLABLE[tile_type] as String
+		get_map().set_tile_type(tile, filled_type)
+		for dir in Tile.DIRS:
+			floodfill(tile + dir, true)
