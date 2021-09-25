@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://stage/Stage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/slime/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entity/rock/Rock.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entity/slime/fire_slime/FireSlime.tscn" type="PackedScene" id=4]
 [ext_resource path="res://entity/trunk/Trunk.tscn" type="PackedScene" id=5]
+[ext_resource path="res://entity/slime/air_slime/AirSlime.tscn" type="PackedScene" id=6]
 
 [node name="Stage" instance=ExtResource( 1 )]
 player_path = NodePath("Player")
@@ -20,3 +21,6 @@ tile = Vector2( 5, 5 )
 
 [node name="FireSlime" parent="." index="4" instance=ExtResource( 4 )]
 tile = Vector2( 3, 5 )
+
+[node name="AirSlime" parent="." index="5" instance=ExtResource( 6 )]
+tile = Vector2( 7, 3 )
