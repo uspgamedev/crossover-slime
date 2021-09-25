@@ -8,11 +8,12 @@ onready var next_stage_idx := 0
 
 func _physics_process(_delta):
 	if current_stage != null:
+		current_stage.tick_entities()
 		move_player()
 
 func move_player():
 	var player := current_stage.get_player()
-	if player != null and not player.moving:
+	if player != null and not player.is_moving():
 		var move_dir := Vector2.ZERO
 		move_dir.x	= Input.get_action_strength("move_right") \
 					- Input.get_action_strength("move_left")
@@ -34,5 +35,5 @@ func _process(_delta):
 func _input(event):
 	if event.is_action_pressed("use_power"):
 		var player := current_stage.get_player()
-		if player != null and not player.moving:
+		if player != null and not player.is_moving():
 			current_stage.apply_effect(player, { type = "use_power" })
