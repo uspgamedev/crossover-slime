@@ -5,9 +5,10 @@ export var player_path := NodePath()
 export var map_path := NodePath()
 
 func _physics_process(_delta):
-	for node in get_children():
-		if node is Entity:
-			apply_effect(node, { type = "tick" })
+	if not Engine.editor_hint:
+		for node in get_children():
+			if node is Entity:
+				apply_effect(node, { type = "tick" })
 
 func _process(delta):
 	for node in get_children():
