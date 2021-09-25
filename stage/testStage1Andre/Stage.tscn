@@ -44,12 +44,14 @@ tile = Vector2( 10, 2 )
 position = Vector2( 672, 224 )
 tile = Vector2( 10, 3 )
 
-[node name="Trunk7" parent="." index="11" instance=ExtResource( 5 )]
+[node name="Trunk8" parent="." index="11" instance=ExtResource( 5 )]
+position = Vector2( 672, 352 )
+tile = Vector2( 10, 5 )
+
+[node name="Rock" parent="." index="12" instance=ExtResource( 3 )]
+position = Vector2( 544, 96 )
+tile = Vector2( 8, 1 )
+
+[node name="Trunk7" parent="." index="13" instance=ExtResource( 5 )]
 position = Vector2( 672, 288 )
 tile = Vector2( 10, 4 )
-
-[node name="Trunk" parent="Trunk7" index="2" instance=ExtResource( 5 )]
-position = Vector2( -4.26038, 68.3826 )
-
-[node name="Rock" parent="Trunk7" index="3" instance=ExtResource( 3 )]
-position = Vector2( -122.387, -206.53 )
