@@ -35,9 +35,19 @@ _global_script_classes=[ {
 "path": "res://property/flammable/Flammable.gd"
 }, {
 "base": "Property",
+"class": "Hazard",
+"language": "GDScript",
+"path": "res://property/hazard/Hazard.gd"
+}, {
+"base": "Property",
 "class": "Movable",
 "language": "GDScript",
 "path": "res://property/movable/Movable.gd"
+}, {
+"base": "Property",
+"class": "PoweredByEarth",
+"language": "GDScript",
+"path": "res://property/powered_by_earth/PoweredByEarth.gd"
 }, {
 "base": "Node2D",
 "class": "Property",
@@ -55,7 +65,9 @@ _global_script_class_icons={
 "FacingDirection": "",
 "Fagocitosis": "",
 "Flammable": "",
+"Hazard": "",
 "Movable": "",
+"PoweredByEarth": "",
 "Property": "",
 "Stage": ""
 }
