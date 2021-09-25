@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://vfx/Bonfire.gd" type="Script" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.00414938, 0.390042, 0.626556, 0.871369, 1 )
+colors = PoolColorArray( 1, 0.401855, 0.0429688, 1, 0.867188, 0.340703, 0.179535, 1, 0.175781, 0.161362, 0.161362, 1, 0.17431, 0.161012, 0.161012, 0.922222, 0.156863, 0.156863, 0.156863, 0 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.4 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+emission_shape = 1
+emission_sphere_radius = 20.0
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 0.0
+gravity = Vector3( 0, -300, 0 )
+initial_velocity = 50.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 25.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
+
+[node name="Bonfire" type="Particles2D"]
+material = SubResource( 1 )
+emitting = false
+amount = 24
+lifetime = 0.8
+randomness = 1.0
+process_material = SubResource( 6 )
+script = ExtResource( 1 )
