@@ -35,6 +35,11 @@ _global_script_classes=[ {
 "path": "res://property/flammable/Flammable.gd"
 }, {
 "base": "Property",
+"class": "Goal",
+"language": "GDScript",
+"path": "res://property/goal/Goal.gd"
+}, {
+"base": "Property",
 "class": "Gravity",
 "language": "GDScript",
 "path": "res://property/gravity/Gravity.gd"
@@ -85,6 +90,7 @@ _global_script_class_icons={
 "FacingDirection": "",
 "Fagocitosis": "",
 "Flammable": "",
+"Goal": "",
 "Gravity": "",
 "Hazard": "",
 "Map": "",
