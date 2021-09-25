@@ -10,7 +10,7 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 			}
 			stage.apply_effect(entity, check_dir)
 			var dir := check_dir.dir as Vector2
-			var map := stage.get_map()
+#			var map := stage.get_map()
 			var target_tile := entity.tile + dir
 			# TODO: squirt vfx
 #			var target_pos := map.map_to_world(target_tile) as Vector2 \

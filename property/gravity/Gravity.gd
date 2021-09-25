@@ -8,7 +8,7 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 			if tile_type in Map.SHALLOW_PIT_TILES:
 				effect.canceled = true
 		{ "type": "tick" }:
-			if not entity.moving:
+			if not entity.is_moving():
 				var tile_type := stage.get_map().get_tile_type(entity.tile)
 				if tile_type in Map.DEEP_PIT_TILES:
 					# TODO dying nimation

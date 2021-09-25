@@ -6,7 +6,7 @@ const FLOODFILL_DELAY := 0.1
 export var player_path := NodePath()
 export var map_path := NodePath()
 
-func _physics_process(_delta):
+func tick_entities():
 	if not Engine.editor_hint:
 		for node in get_children():
 			if node is Entity:

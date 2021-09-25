@@ -15,4 +15,4 @@ func set_tile_type(tile: Vector2, type: String):
 
 func get_tile_type(tile: Vector2) -> String:
 	var cell := get_cellv(tile)
-	return tile_set.tile_get_name(cell)
+	return tile_set.tile_get_name(cell) if cell >= 0 else "unknown"
