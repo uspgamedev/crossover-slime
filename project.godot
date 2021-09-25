@@ -35,6 +35,16 @@ _global_script_classes=[ {
 "path": "res://property/flammable/Flammable.gd"
 }, {
 "base": "Property",
+"class": "Gravity",
+"language": "GDScript",
+"path": "res://property/gravity/Gravity.gd"
+}, {
+"base": "TileMap",
+"class": "Map",
+"language": "GDScript",
+"path": "res://stage/Map.gd"
+}, {
+"base": "Property",
 "class": "Movable",
 "language": "GDScript",
 "path": "res://property/movable/Movable.gd"
@@ -55,6 +65,8 @@ _global_script_class_icons={
 "FacingDirection": "",
 "Fagocitosis": "",
 "Flammable": "",
+"Gravity": "",
+"Map": "",
 "Movable": "",
 "Property": "",
 "Stage": ""

@@ -32,7 +32,8 @@ func apply_effect(stage: Node, effect: Dictionary):
 	children.invert()
 	for child in children:
 		if child.has_method("_handle_effect"):
-			child._handle_effect(stage, self, effect)
+			if not effect.get("canceled", false):
+				child._handle_effect(stage, self, effect)
 
 func has_property(script: Script) -> bool:
 	for child in get_children():
