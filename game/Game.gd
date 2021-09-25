@@ -18,7 +18,7 @@ func move_player():
 					- Input.get_action_strength("move_left")
 		move_dir.y	= Input.get_action_strength("move_down") \
 					- Input.get_action_strength("move_up")
-		if move_dir.x * move_dir.y == 0:
+		if move_dir.x * move_dir.y == 0 and move_dir.length_squared() > 0:
 			player.apply_effect(current_stage, { type = "move", dir = move_dir })
 
 func _process(_delta):
