@@ -11,7 +11,7 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 					with = entity,
 					blocked = true
 				}
-				block.apply_effect(stage, collide_effect)
+				stage.apply_effect(block, collide_effect)
 				if collide_effect.blocked:
 					return
 			entity.tile = new_tile
