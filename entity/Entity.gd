@@ -1,3 +1,4 @@
+tool
 class_name Entity extends Node2D
 
 const GROUP := "entity"
@@ -9,6 +10,16 @@ export var SMOOTH := 6
 var moving := false
 
 func _process_entity(map: TileMap, delta: float):
+	if Engine.editor_hint:
+		update_tile_and_snap_to_grid(map)
+	else:
+		animate_movement(map, delta)
+
+func update_tile_and_snap_to_grid(map: TileMap):
+	tile = map.world_to_map(position).floor()
+	position = map.map_to_world(tile) + map.cell_size / 2
+
+func animate_movement(map: TileMap, delta: float):
 	var target_pos := map.map_to_world(tile) + map.cell_size / 2
 	position += (target_pos - position) * SMOOTH * delta
 	if target_pos.distance_squared_to(position) > MOVING_THRESHOLD:

@@ -1,10 +1,11 @@
+tool
 class_name Stage extends YSort
 
 export var player_path := NodePath()
 export var map_path := NodePath()
 
 func _process(delta):
-	for node in get_tree().get_nodes_in_group(Entity.GROUP):
+	for node in get_children():
 		if node is Entity:
 			node._process_entity($Map, delta)
 
