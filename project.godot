@@ -56,8 +56,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="SlimePuzzle"
-config/icon="res://icon.png"
+config/name="Slime Puzzle"
+config/icon="res://entity/player/slime-pink-front.png"
 
 [display]
 
