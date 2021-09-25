@@ -24,6 +24,8 @@ func _handle_effect(_stage: Stage, _entity: Entity, effect: Dictionary):
 	match effect:
 		{ "type": "move", "dir": var dir }:
 			facing = closest_dir(dir)
+		{ "type": "check_dir", .. }:
+			effect.dir = DIRS[facing]
 
 func closest_dir(dir: Vector2) -> int:
 	var maxalign := -1.0

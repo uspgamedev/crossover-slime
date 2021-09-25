@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://stage/Stage.gd" type="Script" id=1]
+[ext_resource path="res://vfx/Flames.tscn" type="PackedScene" id=2]
 
 [node name="Stage" type="YSort"]
 script = ExtResource( 1 )
+map_path = NodePath("Map")
 
 [node name="Map" type="TileMap" parent="."]
 format = 1
+
+[node name="Gambiarra, não tirar" parent="." instance=ExtResource( 2 )]
+position = Vector2( 105.946, -103.827 )

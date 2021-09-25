@@ -1,6 +1,7 @@
 class_name Stage extends YSort
 
 export var player_path := NodePath()
+export var map_path := NodePath()
 
 func _process(delta):
 	for node in get_tree().get_nodes_in_group(Entity.GROUP):
@@ -9,6 +10,9 @@ func _process(delta):
 
 func get_player() -> Entity:
 	return get_node_or_null(player_path) as Entity
+
+func get_map() -> TileMap:
+	return get_node_or_null(map_path) as TileMap
 
 func get_entity_at(tile: Vector2) -> Entity:
 	for node in get_tree().get_nodes_in_group(Entity.GROUP):

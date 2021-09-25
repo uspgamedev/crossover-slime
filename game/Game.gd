@@ -19,7 +19,7 @@ func move_player():
 		move_dir.y	= Input.get_action_strength("move_down") \
 					- Input.get_action_strength("move_up")
 		if move_dir.x * move_dir.y == 0 and move_dir.length_squared() > 0:
-			player.apply_effect(current_stage, { type = "move", dir = move_dir })
+			current_stage.apply_effect(player, { type = "move", dir = move_dir })
 
 func _process(_delta):
 	if current_stage == null:
@@ -30,3 +30,9 @@ func _process(_delta):
 		current_stage = stage_scn.instance()
 		next_stage_idx += 1
 		add_child(current_stage)
+
+func _input(event):
+	if event.is_action_pressed("use_power"):
+		var player := current_stage.get_player()
+		if not player.moving:
+			current_stage.apply_effect(player, { type = "use_power" })

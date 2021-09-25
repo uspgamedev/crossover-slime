@@ -30,6 +30,11 @@ _global_script_classes=[ {
 "path": "res://property/fagocitosis/Fagocitosis.gd"
 }, {
 "base": "Property",
+"class": "Flammable",
+"language": "GDScript",
+"path": "res://property/flammable/Flammable.gd"
+}, {
+"base": "Property",
 "class": "Movable",
 "language": "GDScript",
 "path": "res://property/movable/Movable.gd"
@@ -49,6 +54,7 @@ _global_script_class_icons={
 "Entity": "",
 "FacingDirection": "",
 "Fagocitosis": "",
+"Flammable": "",
 "Movable": "",
 "Property": "",
 "Stage": ""
@@ -63,7 +69,6 @@ config/icon="res://entity/player/slime-pink-front.png"
 
 window/size/width=1280
 window/size/height=720
-window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

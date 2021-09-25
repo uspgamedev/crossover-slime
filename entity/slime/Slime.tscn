@@ -7,7 +7,3 @@
 
 [node name="Absorbable" type="Node2D" parent="." index="0"]
 script = ExtResource( 2 )
-
-[node name="Polygon2D" type="Polygon2D" parent="." index="1"]
-color = Color( 0.717647, 0.317647, 0.0980392, 1 )
-polygon = PoolVector2Array( -21.7806, 5.44388, -7.15058, 16.7704, 13.1427, 13.9387, 31.0763, -3.99487, 10.3111, -27.1198, -13.7577, -27.5917 )
