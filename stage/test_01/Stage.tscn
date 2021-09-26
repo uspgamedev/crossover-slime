@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://stage/Stage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/slime/player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://entity/slime/air_slime/AirSlime.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entity/slime/water_slime/WaterSlime.tscn" type="PackedScene" id=7]
 [ext_resource path="res://entity/exit/Exit.tscn" type="PackedScene" id=8]
+[ext_resource path="res://entity/slime/neutral_slime/NeutralSlime.tscn" type="PackedScene" id=9]
 
 [node name="Stage" instance=ExtResource( 1 )]
 player_path = NodePath("Player")
@@ -23,22 +24,26 @@ tile = Vector2( 6, 4 )
 position = Vector2( 288, 352 )
 tile = Vector2( 4, 5 )
 
-[node name="FireSlime" parent="." index="3" instance=ExtResource( 4 )]
+[node name="NeutralSlime" parent="." index="3" instance=ExtResource( 9 )]
+position = Vector2( 352, 160 )
+tile = Vector2( 5, 2 )
+
+[node name="FireSlime" parent="." index="4" instance=ExtResource( 4 )]
 position = Vector2( 160, 352 )
 tile = Vector2( 2, 5 )
 
-[node name="AirSlime" parent="." index="4" instance=ExtResource( 6 )]
+[node name="AirSlime" parent="." index="5" instance=ExtResource( 6 )]
 position = Vector2( 352, 288 )
 tile = Vector2( 5, 4 )
 
-[node name="WaterSlime" parent="." index="5" instance=ExtResource( 7 )]
+[node name="WaterSlime" parent="." index="6" instance=ExtResource( 7 )]
 position = Vector2( 480, 160 )
 tile = Vector2( 7, 2 )
 
-[node name="Exit" parent="." index="6" instance=ExtResource( 8 )]
+[node name="Exit" parent="." index="7" instance=ExtResource( 8 )]
 position = Vector2( 736, 352 )
 tile = Vector2( 11, 5 )
 
-[node name="Player" parent="." index="7" instance=ExtResource( 2 )]
+[node name="Player" parent="." index="8" instance=ExtResource( 2 )]
 position = Vector2( 160, 224 )
 tile = Vector2( 2, 3 )

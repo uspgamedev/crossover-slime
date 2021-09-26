@@ -7,8 +7,11 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 		{ "type": "collide", "with": var other, .. }:
 			if other.has_property(Fagocitosis):
 				effect.blocked = false
+				var power: Property = null
+				if power_property_scn != null:
+					power = power_property_scn.instance() 
 				stage.apply_effect(other, {
 					type = "gain_power",
-					power = power_property_scn.instance()
+					power = power
 				})
 				entity.queue_free()
