@@ -9,8 +9,8 @@
 [ext_resource path="res://stage/stage06/Stage.tscn" type="PackedScene" id=7]
 [ext_resource path="res://stage/stage08/Stage.tscn" type="PackedScene" id=8]
 [ext_resource path="res://stage/stage07/Stage.tscn" type="PackedScene" id=9]
-[ext_resource path="res://stage/stage09/Stage.tscn" type="PackedScene" id=10]
-[ext_resource path="res://stage/rockFirstLevel/Stage.tscn" type="PackedScene" id=11]
+[ext_resource path="res://stage/stage10/Stage.tscn" type="PackedScene" id=10]
+[ext_resource path="res://stage/stage09/Stage.tscn" type="PackedScene" id=11]
 [ext_resource path="res://stage/testStageRock/Stage.tscn" type="PackedScene" id=12]
 [ext_resource path="res://stage/plantFirstLevel/Stage.tscn" type="PackedScene" id=13]
 
