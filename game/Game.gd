@@ -1,6 +1,7 @@
 extends Control
 
 export(Array, PackedScene) var stages
+export(String, FILE) var victory_scn_path
 
 var current_stage: Stage = null
 
@@ -37,7 +38,8 @@ func move_player():
 func _process(_delta):
 	if current_stage == null and not $Tween.is_active():
 		if next_stage_idx >= stages.size():
-			get_tree().quit()
+			#warning-ignore:return_value_discarded
+			get_tree().change_scene(victory_scn_path)
 			return
 		var stage_scn := stages[next_stage_idx] as PackedScene
 		current_stage = stage_scn.instance()
