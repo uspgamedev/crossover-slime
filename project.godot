@@ -74,11 +74,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://property/powered_by_fire/PoweredByFire.gd"
 }, {
-"base": "Property",
-"class": "PoweredByWater",
-"language": "GDScript",
-"path": "res://property/powered_by_water/PoweredByWater.gd"
-}, {
 "base": "Node2D",
 "class": "Property",
 "language": "GDScript",
@@ -113,7 +108,6 @@ _global_script_class_icons={
 "Movable": "",
 "PoweredByEarth": "",
 "PoweredByFire": "",
-"PoweredByWater": "",
 "Property": "",
 "Stage": "",
 "Steppable": "",
