@@ -16,3 +16,7 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 						entity.queue_free()
 					elif entity.has_property(PoweredByFire):
 						entity.queue_free()
+						
+				var entity_type := stage.get_entity_at(entity.tile)
+				if entity.has_property(LaserBeam):
+					entity.queue_free()

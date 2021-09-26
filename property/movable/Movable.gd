@@ -5,7 +5,7 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 		{ "type": "move", "dir": var dir }:
 			var new_tile := entity.tile + dir as Vector2
 			var block := stage.get_entity_at(new_tile)
-			if block != null:
+			if block != null and not block.has_property(LaserBeam):
 				var collide_effect := {
 					type = "collide",
 					with = entity,
