@@ -1,5 +1,7 @@
 class_name Movable extends Property
 
+signal moved
+
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 	match effect:
 		{ "type": "move", "dir": var dir }:
@@ -15,3 +17,4 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				if collide_effect.blocked:
 					return
 			entity.tile = new_tile
+			emit_signal("moved")

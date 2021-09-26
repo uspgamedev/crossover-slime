@@ -38,6 +38,7 @@ func _process(_delta):
 		current_stage.connect("won", self, "_clear_stage")
 		#warning-ignore:return_value_discarded
 		current_stage.connect("power_changed", $HUD, "set_power_name")
+		$HUD.set_power_name("NONE")
 		next_stage_idx += 1
 		add_child(current_stage)
 
