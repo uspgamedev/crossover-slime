@@ -12,9 +12,11 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 			var dir := check_dir.dir as Vector2
 			var map := stage.get_map()
 			var target_tile := entity.tile + dir
-			while 	map.get_cellv(target_tile) >= 0 \
-				and	stage.get_entity_at(target_tile) == null:
-					target_tile += dir
+			while map.get_cellv(target_tile) >= 0:
+				var block := stage.get_entity_at(target_tile)
+				if block != null and not block.sunk:
+					break
+				target_tile += dir
 #			var target_pos := map.map_to_world(target_tile) as Vector2 \
 #							+ map.cell_size as Vector2 / 2.0
 #			var zap := zap_scn.instance() as Node2D

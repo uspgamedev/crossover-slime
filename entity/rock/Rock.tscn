@@ -13,7 +13,7 @@ sprite_path = NodePath("Sprite")
 [node name="Sprite" type="Sprite" parent="." index="0"]
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 6 )
-offset = Vector2( 0, -64 )
+offset = Vector2( 0, -80 )
 
 [node name="Movable" type="Node2D" parent="." index="1"]
 script = ExtResource( 2 )
