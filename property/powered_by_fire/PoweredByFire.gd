@@ -1,7 +1,11 @@
 class_name PoweredByFire extends Property
 
-export var mix_with: Script
+export var mix_with_water: Script
 export var air_power_scn: PackedScene
+
+export var mix_with_air: Script
+export var lightning_power_scn: PackedScene
+
 export var flames_scn: PackedScene
 
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
@@ -25,5 +29,7 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 					type = "burn"
 				})
 		{ "type": "gain_power", "power": var power }:
-			if power is mix_with:
+			if power is mix_with_water:
 				effect.power = air_power_scn.instance()
+			if power is mix_with_air:
+				effect.power = lightning_power_scn.instance()
