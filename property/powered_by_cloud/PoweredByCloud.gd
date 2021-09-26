@@ -1,4 +1,4 @@
-class_name PoweredByCloud extends Property
+class_name PoweredByCloud extends Powered
 
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 	match effect:

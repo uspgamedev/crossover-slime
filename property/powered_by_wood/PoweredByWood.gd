@@ -1,4 +1,4 @@
-extends Property
+extends Powered
 
 export var trunk_scn: PackedScene
 

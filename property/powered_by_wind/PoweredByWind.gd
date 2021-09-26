@@ -1,4 +1,4 @@
-class_name PoweredByWind extends Property
+class_name PoweredByWind extends Powered
 
 export var gust_scn: PackedScene
 
