@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://entity/slime/Slime.tscn" type="PackedScene" id=1]
 [ext_resource path="res://property/hazard/Hazard.gd" type="Script" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://entity/slime/player/NeutralSlimeSpriteFrames.tres" type="SpriteFrames" id=5]
 [ext_resource path="res://entity/slime/player/BouncingAnimation.gd" type="Script" id=6]
 [ext_resource path="res://entity/slime/player/Mortal.gd" type="Script" id=7]
+[ext_resource path="res://sfx/sfx_hop.mp3" type="AudioStream" id=8]
+[ext_resource path="res://sfx/sfx_hazard_spike.mp3" type="AudioStream" id=9]
+[ext_resource path="res://sfx/sfx_fall.mp3" type="AudioStream" id=10]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hop"
@@ -35,6 +38,28 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 160 ), Vector2( 0, -240 ), Vector2( 0, 160 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "audio"
+tracks/2/path = NodePath("hop")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("hop:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -101,8 +126,30 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/5/type = "audio"
+tracks/5/path = NodePath("ded")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ded:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "rippester stalone"
 length = 0.5
 step = 0.02
@@ -154,8 +201,30 @@ tracks/3/keys = {
 "update": 0,
 "values": [ 0.0, -45.0 ]
 }
+tracks/4/type = "audio"
+tracks/4/path = NodePath("fall")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("fall:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:scale")
@@ -186,15 +255,15 @@ tracks/1/keys = {
 SMOOTH = 8
 
 [node name="Sprite" parent="." index="0"]
-modulate = Color( 1, 1, 1, 0.980195 )
+modulate = Color( 1, 1, 1, 0.923077 )
 animation = "rip"
 frame = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 anims/hop = SubResource( 1 )
 anims/ripperino = SubResource( 2 )
-"anims/rippester stalone" = SubResource( 4 )
-anims/standard = SubResource( 3 )
+"anims/rippester stalone" = SubResource( 3 )
+anims/standard = SubResource( 4 )
 script = ExtResource( 6 )
 
 [node name="Movable" type="Node2D" parent="." index="2"]
@@ -210,6 +279,16 @@ script = ExtResource( 2 )
 [node name="Mortal" type="Node2D" parent="." index="7"]
 script = ExtResource( 7 )
 animation_path = NodePath("../AnimationPlayer")
+
+[node name="fall" type="AudioStreamPlayer2D" parent="." index="8"]
+stream = ExtResource( 10 )
+
+[node name="hop" type="AudioStreamPlayer2D" parent="." index="9"]
+stream = ExtResource( 8 )
+
+[node name="ded" type="AudioStreamPlayer2D" parent="." index="10"]
+stream = ExtResource( 9 )
+pitch_scale = 1.5
 
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_animation_finished"]
 [connection signal="moved" from="Movable" to="AnimationPlayer" method="bounce"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_spike_step.mp3-073f9383ca80a36c6b491eaad9dced29.mp3str"
+
+[deps]
+
+source_file="res://sfx/sfx_spike_step.mp3"
+dest_files=[ "res://.import/sfx_spike_step.mp3-073f9383ca80a36c6b491eaad9dced29.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0.0

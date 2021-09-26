@@ -3,6 +3,7 @@ class_name PoweredByCloud extends Powered
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 	match effect:
 		{ "type": "use_power" }:
+			$AudioStreamPlayer2D.play()
 			var check_dir := {
 				type = "check_dir", dir = Vector2.DOWN
 			}

@@ -12,4 +12,4 @@ dest_files=[ "res://.import/Slime-Base.mp3-2322cab291a8ee47b8cf5bff4bba248b.mp3s
 [params]
 
 loop=true
-loop_offset=0
+loop_offset=10.66

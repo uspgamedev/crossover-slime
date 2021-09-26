@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_hop.mp3-31ff0b766658dc04cc0bd3330d180274.mp3str"
+
+[deps]
+
+source_file="res://sfx/sfx_hop.mp3"
+dest_files=[ "res://.import/sfx_hop.mp3-31ff0b766658dc04cc0bd3330d180274.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0.0

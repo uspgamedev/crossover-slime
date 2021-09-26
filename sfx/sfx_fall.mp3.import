@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_fall.mp3-afd382dc8fed6fb25f9d55dc1460b7d9.mp3str"
+
+[deps]
+
+source_file="res://sfx/sfx_fall.mp3"
+dest_files=[ "res://.import/sfx_fall.mp3-afd382dc8fed6fb25f9d55dc1460b7d9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0.0

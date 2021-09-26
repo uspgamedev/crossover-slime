@@ -18,7 +18,10 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				stage.update_power_name(power.power_name)
 				print_debug(power.power_name)
 				DJ.play_with_cross_fade(power.power_name)
+				DJ.play_sfx(power.power_name)
 			else:
 				sprite.frames = default_sprite
 				sprite.modulate = Color.white
 				stage.update_power_name("NONE")
+				DJ.play_with_cross_fade("base")
+				DJ.play_sfx("base")

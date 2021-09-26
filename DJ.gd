@@ -1,9 +1,11 @@
 extends Node
 
 onready var debug = $debug
+onready var sfx_list = $sfx
 onready var songs_list = $songs
 
 var songs = { }
+var sfx = { }
 var default_volumes = { }
 
 var current = ""
@@ -22,6 +24,8 @@ func _ready():
 	for s in songs_list.get_children():
 		songs[str(s.name)] = s
 		default_volumes[str(s.name)] = s.get_volume_db()
+	for s in sfx_list.get_children():
+		sfx[str(s.name)] = s
 		
 	play("base")
 
@@ -36,6 +40,7 @@ func play(name: String, from: float = 0.0):
 	
 	if songs.has(name):
 		current = name
+		songs[name]
 		songs[name].play(from)
 	else:
 		print_debug("Song \'" + name + "\' not found")
@@ -62,6 +67,13 @@ func play_with_cross_fade(name: String, duration: float = 0.5):
 
 func _on_TweenCrossCurr_tween_completed(_object, _key):
 	songs[current].stop()
-	songs[current].set_volume_db(default_volumes[current])
+	# songs[current].set_volume_db(default_volumes[current])
 	
 	current = next
+	
+	
+func play_sfx(name: String):
+	if sfx.has(name):
+		sfx[name].play()
+	else:
+		print_debug("Sfx \'" + name + "\' not found")

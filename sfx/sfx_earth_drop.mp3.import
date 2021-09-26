@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_earth_drop.mp3-6bca6906f82899d92016138c447ca0a9.mp3str"
+
+[deps]
+
+source_file="res://sfx/sfx_earth_drop.mp3"
+dest_files=[ "res://.import/sfx_earth_drop.mp3-6bca6906f82899d92016138c447ca0a9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0.0

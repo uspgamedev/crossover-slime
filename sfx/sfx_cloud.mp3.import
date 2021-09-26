@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_cloud.mp3-ca3e26cf344484200c5c3cbf35a4863a.mp3str"
+
+[deps]
+
+source_file="res://sfx/sfx_cloud.mp3"
+dest_files=[ "res://.import/sfx_cloud.mp3-ca3e26cf344484200c5c3cbf35a4863a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0.0

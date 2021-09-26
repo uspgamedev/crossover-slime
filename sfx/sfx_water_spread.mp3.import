@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_water_spread.mp3-624868fe6b59945aaa9c8392411e8101.mp3str"
+
+[deps]
+
+source_file="res://sfx/sfx_water_spread.mp3"
+dest_files=[ "res://.import/sfx_water_spread.mp3-624868fe6b59945aaa9c8392411e8101.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0.0

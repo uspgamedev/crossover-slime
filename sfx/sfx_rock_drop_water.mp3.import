@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_rock_drop_water.mp3-0fbb023ee56efae1755171394bfa2efa.mp3str"
+
+[deps]
+
+source_file="res://sfx/sfx_rock_drop_water.mp3"
+dest_files=[ "res://.import/sfx_rock_drop_water.mp3-0fbb023ee56efae1755171394bfa2efa.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0.0

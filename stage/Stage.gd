@@ -9,6 +9,9 @@ export var map_path := NodePath()
 signal won
 signal power_changed(power_name)
 
+func _ready():
+	DJ.play_with_cross_fade("base")
+
 func tick_entities():
 	if not Engine.editor_hint:
 		for node in get_children():

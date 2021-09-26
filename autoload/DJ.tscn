@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://DJ.gd" type="Script" id=1]
 [ext_resource path="res://bgm/Slime-Water.mp3" type="AudioStream" id=2]
@@ -9,6 +9,13 @@
 [ext_resource path="res://bgm/Slime-Plant.mp3" type="AudioStream" id=7]
 [ext_resource path="res://bgm/Slime-Cloud.mp3" type="AudioStream" id=8]
 [ext_resource path="res://bgm/Slime-Earth.mp3" type="AudioStream" id=9]
+[ext_resource path="res://sfx/sfx_transform_water.mp3" type="AudioStream" id=10]
+[ext_resource path="res://sfx/sfx_transform_base.mp3" type="AudioStream" id=11]
+[ext_resource path="res://sfx/sfx_transform_fire.mp3" type="AudioStream" id=12]
+[ext_resource path="res://sfx/sfx_transform_lightning.mp3" type="AudioStream" id=13]
+[ext_resource path="res://sfx/sfx_transform_wind.mp3" type="AudioStream" id=14]
+[ext_resource path="res://sfx/sfx_transform_wood.mp3" type="AudioStream" id=15]
+[ext_resource path="res://sfx/sfx_transform_earth.mp3" type="AudioStream" id=16]
 
 [node name="DJ" type="Node"]
 script = ExtResource( 1 )
@@ -50,5 +57,31 @@ volume_db = -15.0
 [node name="TweenCrossCurr" type="Tween" parent="."]
 
 [node name="TweenCrossNext" type="Tween" parent="."]
+
+[node name="sfx" type="Node" parent="."]
+
+[node name="base" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 11 )
+
+[node name="WATER" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 10 )
+
+[node name="FIRE" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 12 )
+
+[node name="WIND" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 14 )
+
+[node name="CLOUD" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 14 )
+
+[node name="LIGHTNING" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 13 )
+
+[node name="EARTH" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 16 )
+
+[node name="WOOD" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 15 )
 
 [connection signal="tween_completed" from="TweenCrossCurr" to="." method="_on_TweenCrossCurr_tween_completed"]
