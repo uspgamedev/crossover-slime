@@ -31,8 +31,8 @@ tile = Vector2( 5, 2 )
 sprite_path = NodePath("")
 
 [node name="FireSlime" parent="." index="4" instance=ExtResource( 4 )]
-position = Vector2( 160, 352 )
-tile = Vector2( 2, 5 )
+position = Vector2( 288, 288 )
+tile = Vector2( 4, 4 )
 sprite_path = NodePath("")
 
 [node name="AirSlime" parent="." index="5" instance=ExtResource( 6 )]

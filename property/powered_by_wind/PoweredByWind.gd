@@ -2,6 +2,9 @@ extends Property
 
 export var gust_scn: PackedScene
 
+export var mix_with_fire: Script
+export var lightning_power_scn: PackedScene
+
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 	match effect:
 		{ "type": "use_power" }:
@@ -22,3 +25,6 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				stage.apply_effect(target_entity, {
 					type = "move", dir = dir
 				})
+		{ "type": "gain_power", "power": var power }:
+			if power is mix_with_fire:
+				effect.power = lightning_power_scn.instance()
