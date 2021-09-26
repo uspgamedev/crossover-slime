@@ -8,7 +8,7 @@
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "fadeout"
 length = 0.4
 tracks/0/type = "value"
@@ -53,8 +53,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "intro"
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Art:modulate")
 tracks/0/interp = 1
@@ -107,6 +106,6 @@ text = "PRESS SPACE TO START"
 align = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/fadeout = SubResource( 4 )
+anims/fadeout = SubResource( 2 )
 anims/idle = SubResource( 3 )
-anims/intro = SubResource( 2 )
+anims/intro = SubResource( 4 )
