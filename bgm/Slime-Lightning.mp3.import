@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Slime-Lightning.mp3-5578f2967035e64afcabe2327022295b.mp3str"
+
+[deps]
+
+source_file="res://bgm/Slime-Lightning.mp3"
+dest_files=[ "res://.import/Slime-Lightning.mp3-5578f2967035e64afcabe2327022295b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=10.66

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Slime-Fire.mp3-ccb72b8369c307cf165d6a349dcd2142.mp3str"
+
+[deps]
+
+source_file="res://bgm/Slime-Fire.mp3"
+dest_files=[ "res://.import/Slime-Fire.mp3-ccb72b8369c307cf165d6a349dcd2142.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=10.66
