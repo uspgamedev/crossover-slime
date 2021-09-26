@@ -16,12 +16,18 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				var block := stage.get_entity_at(target_tile)
 				if block != null and not block.sunk:
 					break
+				if map.get_tile_type(target_tile) in Map.WALL_TILES:
+					break
 				target_tile += dir
-#			var target_pos := map.map_to_world(target_tile) as Vector2 \
-#							+ map.cell_size as Vector2 / 2.0
-#			var zap := zap_scn.instance() as Node2D
-#			zap.position = target_pos
-#			stage.add_child(zap)
+			var source_pos := map.map_to_world(entity.tile) as Vector2 \
+							+ map.cell_size as Vector2 / 2.0
+			var target_pos := map.map_to_world(target_tile) as Vector2 \
+							+ map.cell_size as Vector2 / 2.0
+			var zap := zap_scn.instance()
+			zap.tile_size = map.cell_size.x
+			zap.position = source_pos
+			zap.target().position = target_pos - source_pos
+			stage.add_child(zap)
 			var target_entity := stage.get_entity_at(target_tile)
 			if target_entity != null:
 				stage.apply_effect(target_entity, {
