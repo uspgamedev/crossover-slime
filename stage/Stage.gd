@@ -47,6 +47,10 @@ func apply_effect(entity: Entity, effect: Dictionary):
 	match effect:
 		{ "type": "splash", "at": var tile }:
 			floodfill(tile)
+		{ "type": "move", "dir": var dir }:
+			var target_tile := entity.tile + dir as Vector2
+			if get_map().get_tile_type(target_tile) in Map.WALL_TILES:
+				effect.cancelled = true
 	if entity != null:
 		entity.apply_effect(self, effect)
 

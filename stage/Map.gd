@@ -3,6 +3,7 @@ class_name Map extends TileMap
 const GROUND_TILES = ["grass"]
 const SHALLOW_PIT_TILES = ["shallow", "shallow_pit"]
 const DEEP_PIT_TILES = ["void", "deep_pit"]
+const WALL_TILES = ["wall-top", "wall-side"]
 const WATER_TILES = ["water", "water_border"]
 const SPIKE_TILES = ["spike"]
 

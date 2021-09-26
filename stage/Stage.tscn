@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://stage/Stage.gd" type="Script" id=1]
 [ext_resource path="res://vfx/Flames.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://stage/tile-deep-hole-no-border-64.png" type="Texture" id=10]
 [ext_resource path="res://stage/tile-filled-hole-64.png" type="Texture" id=11]
 [ext_resource path="res://stage/tile-spike-64.png" type="Texture" id=12]
+[ext_resource path="res://stage/wall-top-tile.png" type="Texture" id=13]
+[ext_resource path="res://stage/wall-front-tile.png" type="Texture" id=14]
 
 [sub_resource type="TileSet" id=1]
 7/name = "grass"
@@ -126,6 +128,34 @@
 14/shape_one_way_margin = 0.0
 14/shapes = [  ]
 14/z_index = 0
+15/name = "wall-top"
+15/texture = ExtResource( 13 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 64, 64 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "wall-side"
+16/texture = ExtResource( 14 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 64, 64 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
 
 [node name="Stage" type="YSort"]
 script = ExtResource( 1 )
