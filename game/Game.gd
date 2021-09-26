@@ -12,7 +12,7 @@ func _physics_process(_delta):
 	if current_stage != null:
 		move_player()
 
-func _win_stage():
+func _clear_stage():
 	current_stage.queue_free()
 	current_stage = null
 
@@ -35,7 +35,7 @@ func _process(_delta):
 		var stage_scn := stages[next_stage_idx] as PackedScene
 		current_stage = stage_scn.instance()
 		#warning-ignore:return_value_discarded
-		current_stage.connect("won", self, "_win_stage")
+		current_stage.connect("won", self, "_clear_stage")
 		next_stage_idx += 1
 		add_child(current_stage)
 
@@ -44,3 +44,6 @@ func _input(event):
 		var player := current_stage.get_player()
 		if player != null and not player.is_moving():
 			current_stage.apply_effect(player, { type = "use_power" })
+	if event.is_action_pressed("retry_stage"):
+		_clear_stage()
+		next_stage_idx -= 1
