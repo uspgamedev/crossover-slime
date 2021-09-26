@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://property/powered_by_water/PoweredByWater.gd" type="Script" id=1]
 [ext_resource path="res://property/powered_by_wind/PoweredByWind.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://property/powered_by_cloud/PoweredByCloud.tscn" type="PackedScene" id=6]
 [ext_resource path="res://property/powered_by_wind/PoweredByWind.gd" type="Script" id=7]
 [ext_resource path="res://entity/slime/water_slime/WaterSlimeSpriteFrames.tres" type="SpriteFrames" id=8]
+[ext_resource path="res://vfx/Squirt.tscn" type="PackedScene" id=9]
 
 [node name="PoweredByWater" type="Node2D"]
 script = ExtResource( 1 )
@@ -19,3 +20,4 @@ mix_with_earth = ExtResource( 4 )
 wood_power_scn = ExtResource( 5 )
 mix_with_wind = ExtResource( 7 )
 cloud_power_scn = ExtResource( 6 )
+squirt_scn = ExtResource( 9 )

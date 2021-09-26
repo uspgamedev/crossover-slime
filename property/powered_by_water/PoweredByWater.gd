@@ -19,14 +19,15 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 			}
 			stage.apply_effect(entity, check_dir)
 			var dir := check_dir.dir as Vector2
-#			var map := stage.get_map()
+			var map := stage.get_map()
 			var target_tile := entity.tile + dir
-			# TODO: squirt vfx
-#			var target_pos := map.map_to_world(target_tile) as Vector2 \
-#							+ map.cell_size as Vector2 / 2.0
-#			var squirt := squirt_scn.instance() as Node2D
-#			squirt.position = target_pos
-#			stage.add_child(squirt)
+			var target_pos := map.map_to_world(entity.tile) as Vector2 \
+							+ map.cell_size as Vector2 / 2.0
+			var squirt := squirt_scn.instance() as Node2D
+			squirt.position = target_pos + 0.3 * dir * map.cell_size
+			squirt.rotation = dir.angle()
+			stage.add_child(squirt)
+			yield(get_tree().create_timer(0.5), "timeout")
 			stage.apply_effect(null, {
 				type = "splash",
 				at = target_tile
