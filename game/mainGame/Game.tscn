@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://game/Game.tscn" type="PackedScene" id=1]
 [ext_resource path="res://stage/stage01/Stage.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://stage/stage09/Stage.tscn" type="PackedScene" id=10]
 [ext_resource path="res://stage/rockFirstLevel/Stage.tscn" type="PackedScene" id=11]
 [ext_resource path="res://stage/testStageRock/Stage.tscn" type="PackedScene" id=12]
+[ext_resource path="res://stage/plantFirstLevel/Stage.tscn" type="PackedScene" id=13]
 
 [node name="Game" instance=ExtResource( 1 )]
-stages = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ]
+stages = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 13 ) ]
