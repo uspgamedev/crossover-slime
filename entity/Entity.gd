@@ -5,7 +5,10 @@ const GROUP := "entity"
 const MOVING_THRESHOLD := 10*10
 
 export var tile := Vector2.ZERO setget set_tile
+export var sprite_path := NodePath()
 export var SMOOTH := 6
+
+var sunk := false
 
 var dirty := false
 var target_pos: Vector2
@@ -32,6 +35,15 @@ func animate_movement(map: TileMap, delta: float):
 	dirty = false
 	target_pos = map.map_to_world(tile) + map.cell_size / 2
 	position += (target_pos - position) * SMOOTH * delta
+	
+	var sprite := get_node_or_null(sprite_path) as Node2D
+	if sprite != null:
+		if sunk:
+			sprite.position.y = 16
+			z_index = 0
+		else:
+			sprite.position.y = 0
+			z_index = 1
 
 func apply_effect(stage: Node, effect: Dictionary):
 	var children := get_children()

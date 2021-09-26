@@ -1,6 +1,5 @@
 class_name Gravity extends Property
 
-export var sprite_path := NodePath()
 export var falls_in_pits := false
 
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
@@ -20,12 +19,6 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 					# TODO dying nimation
 					entity.queue_free()
 				elif tile_type in Map.SHALLOW_PIT_TILES and falls_in_pits:
-					var sprite = get_node_or_null(sprite_path)
-					if sprite != null:
-						sprite.offset.y = 16
-						sprite.z_index = 0
+					entity.sunk = true
 				else:
-					var sprite = get_node_or_null(sprite_path)
-					if sprite != null:
-						sprite.offset.y = 0
-						sprite.z_index = 1
+					entity.sunk = false
