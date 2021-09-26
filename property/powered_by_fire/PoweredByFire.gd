@@ -1,4 +1,4 @@
-class_name PoweredByFire extends Property
+class_name PoweredByFire extends Powered
 
 export var mix_with_water: Script
 export var air_power_scn: PackedScene

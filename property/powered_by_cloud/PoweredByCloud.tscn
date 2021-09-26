@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://property/powered_by_cloud/PoweredByCloud.gd" type="Script" id=1]
+[ext_resource path="res://entity/slime/water_slime/WaterSlimeSpriteFrames.tres" type="SpriteFrames" id=2]
+
+[node name="PoweredByCloud" type="Node2D"]
+script = ExtResource( 1 )
+power_name = "CLOUD"
+appearance = ExtResource( 2 )
+color_override = Color( 0.427451, 0.32549, 0.8, 1 )

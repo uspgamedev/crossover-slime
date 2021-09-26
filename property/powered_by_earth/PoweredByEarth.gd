@@ -1,4 +1,4 @@
-class_name PoweredByEarth extends Property
+class_name PoweredByEarth extends Powered
 
 export var mix_with: Script
 export var wood_power_scn: PackedScene

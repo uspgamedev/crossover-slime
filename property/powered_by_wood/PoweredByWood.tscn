@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://property/powered_by_wood/PoweredByWood.gd" type="Script" id=1]
 [ext_resource path="res://entity/trunk/Trunk.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entity/slime/plant_slime/PlantSlimeSpriteFrames.tres" type="SpriteFrames" id=3]
 
 [node name="PoweredByWood" type="Node2D"]
 script = ExtResource( 1 )
+power_name = "WOOD"
+appearance = ExtResource( 3 )
 trunk_scn = ExtResource( 2 )

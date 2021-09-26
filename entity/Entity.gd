@@ -17,6 +17,9 @@ func set_tile(value: Vector2):
 	tile = value
 	dirty = true
 
+func get_sprite() -> Node2D:
+	return get_node_or_null(sprite_path) as Node2D
+
 func _process_entity(map: TileMap, delta: float):
 	if Engine.editor_hint:
 		update_tile_and_snap_to_grid(map)
@@ -50,7 +53,7 @@ func apply_effect(stage: Node, effect: Dictionary):
 	children.invert()
 	for child in children:
 		if child.has_method("_handle_effect"):
-			if not effect.get("canceled", false):
+			if not effect.get("cancelled", false):
 				child._handle_effect(stage, self, effect)
 
 func has_property(script: Script) -> bool:

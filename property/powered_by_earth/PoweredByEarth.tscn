@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://property/powered_by_earth/PoweredByEarth.gd" type="Script" id=1]
 [ext_resource path="res://property/powered_by_water/PoweredByWater.gd" type="Script" id=2]
 [ext_resource path="res://property/powered_by_wood/PoweredByWood.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entity/slime/earth_slime/EarthSlimeSpriteFrames.tres" type="SpriteFrames" id=4]
 
 [node name="PoweredByEarth" type="Node2D"]
 script = ExtResource( 1 )
+power_name = "EARTH"
+appearance = ExtResource( 4 )
 mix_with = ExtResource( 2 )
 wood_power_scn = ExtResource( 3 )

@@ -11,7 +11,7 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				var block := stage.get_entity_at(tile)
 				if	not falls_in_pits \
 					and (block == null or not block.has_property(Steppable)):
-						effect.canceled = true
+						effect.cancelled = true
 		{ "type": "tick" }:
 			if not entity.is_moving():
 				var tile_type := stage.get_map().get_tile_type(entity.tile)
