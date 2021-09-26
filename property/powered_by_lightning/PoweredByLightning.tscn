@@ -1,12 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://property/powered_by_lightning/PoweredByLightning.gd" type="Script" id=1]
-[ext_resource path="res://entity/slime/fire_slime/FireSlimeSpriteFrames.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://entity/slime/lightning_slime/LightningSlimeSpriteFrames.tres" type="SpriteFrames" id=2]
 [ext_resource path="res://vfx/Zap.tscn" type="PackedScene" id=3]
 
 [node name="PoweredByLightning" type="Node2D"]
 script = ExtResource( 1 )
 power_name = "LIGHTNING"
 appearance = ExtResource( 2 )
-color_override = Color( 0.592157, 0.12549, 0.878431, 1 )
 zap_scn = ExtResource( 3 )

@@ -1,0 +1,33 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=2]
+
+[ext_resource path="res://entity/slime/lightning_slime/slime-lightning-front-idle1.png" type="Texture" id=1]
+[ext_resource path="res://entity/slime/lightning_slime/slime-lightning-front-idle2.png" type="Texture" id=2]
+[ext_resource path="res://entity/slime/lightning_slime/slime-lightning-side2-idle1.png" type="Texture" id=3]
+[ext_resource path="res://entity/slime/lightning_slime/slime-lightning-side2-idle2.png" type="Texture" id=4]
+[ext_resource path="res://entity/slime/lightning_slime/slime-lightning-side1-idle1.png" type="Texture" id=5]
+[ext_resource path="res://entity/slime/lightning_slime/slime-lightning-back-idle1.png" type="Texture" id=6]
+[ext_resource path="res://entity/slime/lightning_slime/slime-lightning-side1-idle2.png" type="Texture" id=7]
+[ext_resource path="res://entity/slime/lightning_slime/slime-lightning-back-idle2.png" type="Texture" id=8]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "idle_up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "idle_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "idle_down",
+"speed": 5.0
+} ]
