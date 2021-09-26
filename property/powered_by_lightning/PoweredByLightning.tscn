@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://property/powered_by_lightning/PoweredByLightning.gd" type="Script" id=1]
+[ext_resource path="res://entity/slime/fire_slime/FireSlimeSpriteFrames.tres" type="SpriteFrames" id=2]
 
 [node name="PoweredByLightning" type="Node2D"]
 script = ExtResource( 1 )
+appearance = ExtResource( 2 )
+color_override = Color( 0.592157, 0.12549, 0.878431, 1 )

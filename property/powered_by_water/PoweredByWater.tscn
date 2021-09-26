@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://property/powered_by_water/PoweredByWater.gd" type="Script" id=1]
 [ext_resource path="res://property/powered_by_wind/PoweredByWind.tscn" type="PackedScene" id=2]
@@ -7,9 +7,11 @@
 [ext_resource path="res://property/powered_by_wood/PoweredByWood.tscn" type="PackedScene" id=5]
 [ext_resource path="res://property/powered_by_cloud/PoweredByCloud.tscn" type="PackedScene" id=6]
 [ext_resource path="res://property/powered_by_wind/PoweredByWind.gd" type="Script" id=7]
+[ext_resource path="res://entity/slime/water_slime/WaterSlimeSpriteFrames.tres" type="SpriteFrames" id=8]
 
 [node name="PoweredByWater" type="Node2D"]
 script = ExtResource( 1 )
+appearance = ExtResource( 8 )
 mix_with_fire = ExtResource( 3 )
 air_power_scn = ExtResource( 2 )
 mix_with_earth = ExtResource( 4 )

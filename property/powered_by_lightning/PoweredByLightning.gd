@@ -1,4 +1,4 @@
-class_name PoweredByLightning extends Property
+class_name PoweredByLightning extends Powered
 
 export var zap_scn: PackedScene
 
