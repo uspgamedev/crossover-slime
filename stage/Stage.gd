@@ -7,6 +7,7 @@ export var player_path := NodePath()
 export var map_path := NodePath()
 
 signal won
+signal power_changed(power_name)
 
 func tick_entities():
 	if not Engine.editor_hint:
@@ -21,6 +22,9 @@ func _process(delta):
 
 func win():
 	emit_signal("won")
+
+func update_power_name(power_name):
+	emit_signal("power_changed", power_name)
 
 func get_player() -> Entity:
 	return get_node_or_null(player_path) as Entity

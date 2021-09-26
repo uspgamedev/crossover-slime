@@ -136,6 +136,8 @@ _global_script_class_icons={
 "PoweredByEarth": "",
 "PoweredByFire": "",
 "PoweredByLightning": "",
+"PoweredByWater": "",
+"PoweredByWind": "",
 "Property": "",
 "Stage": "",
 "Steppable": "",

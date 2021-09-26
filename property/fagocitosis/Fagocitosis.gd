@@ -4,7 +4,7 @@ export var default_sprite: SpriteFrames
 
 onready var current_power: Powered
 
-func _handle_effect(_stage: Stage, entity: Entity, effect: Dictionary):
+func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 	match effect:
 		{ "type": "gain_power", "power": var power }:
 			if current_power != null:
@@ -15,6 +15,8 @@ func _handle_effect(_stage: Stage, entity: Entity, effect: Dictionary):
 				entity.add_child(power)
 				sprite.frames = power.appearance
 				sprite.modulate = power.color_override
+				stage.update_power_name(power.power_name)
 			else:
 				sprite.frames = default_sprite
 				sprite.modulate = Color.white
+				stage.update_power_name("NONE")

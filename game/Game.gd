@@ -36,6 +36,8 @@ func _process(_delta):
 		current_stage = stage_scn.instance()
 		#warning-ignore:return_value_discarded
 		current_stage.connect("won", self, "_clear_stage")
+		#warning-ignore:return_value_discarded
+		current_stage.connect("power_changed", $HUD, "set_power_name")
 		next_stage_idx += 1
 		add_child(current_stage)
 

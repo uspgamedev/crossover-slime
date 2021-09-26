@@ -10,6 +10,7 @@
 
 [node name="PoweredByFire" type="Node2D"]
 script = ExtResource( 1 )
+power_name = "FIRE"
 appearance = ExtResource( 7 )
 mix_with_water = ExtResource( 4 )
 air_power_scn = ExtResource( 3 )

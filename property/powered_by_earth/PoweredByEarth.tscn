@@ -7,6 +7,7 @@
 
 [node name="PoweredByEarth" type="Node2D"]
 script = ExtResource( 1 )
+power_name = "EARTH"
 appearance = ExtResource( 4 )
 mix_with = ExtResource( 2 )
 wood_power_scn = ExtResource( 3 )
