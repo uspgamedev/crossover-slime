@@ -168,6 +168,10 @@ config/name="Slime Puzzle"
 run/main_scene="res://title/Title.tscn"
 config/icon="res://entity/slime/player/slime-pink-front.png"
 
+[autoload]
+
+DJ="*res://autoload/DJ.tscn"
+
 [display]
 
 window/size/width=1280

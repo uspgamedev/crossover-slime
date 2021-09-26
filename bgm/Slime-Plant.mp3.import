@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Slime-Plant.mp3-c1a1e56f95c683deb1c0a03d4678bcf9.mp3str"
+
+[deps]
+
+source_file="res://bgm/Slime-Plant.mp3"
+dest_files=[ "res://.import/Slime-Plant.mp3-c1a1e56f95c683deb1c0a03d4678bcf9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=10.66

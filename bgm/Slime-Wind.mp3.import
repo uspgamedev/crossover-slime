@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Slime-Wind.mp3-67b13080c96cf75c0979461ea2decf55.mp3str"
+
+[deps]
+
+source_file="res://bgm/Slime-Wind.mp3"
+dest_files=[ "res://.import/Slime-Wind.mp3-67b13080c96cf75c0979461ea2decf55.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=10.66

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Slime-Earth.mp3-110d8de8a4e196f76f6db456007a20ed.mp3str"
+
+[deps]
+
+source_file="res://bgm/Slime-Earth.mp3"
+dest_files=[ "res://.import/Slime-Earth.mp3-110d8de8a4e196f76f6db456007a20ed.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=10.66

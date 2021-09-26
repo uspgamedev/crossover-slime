@@ -16,6 +16,8 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				sprite.frames = power.appearance
 				sprite.modulate = power.color_override
 				stage.update_power_name(power.power_name)
+				print_debug(power.power_name)
+				DJ.play_with_cross_fade(power.power_name)
 			else:
 				sprite.frames = default_sprite
 				sprite.modulate = Color.white
