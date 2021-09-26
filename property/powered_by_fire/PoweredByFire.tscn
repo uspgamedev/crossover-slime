@@ -1,12 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://property/powered_by_fire/PoweredByFire.gd" type="Script" id=1]
 [ext_resource path="res://vfx/Flames.tscn" type="PackedScene" id=2]
 [ext_resource path="res://property/powered_by_wind/PoweredByWind.tscn" type="PackedScene" id=3]
 [ext_resource path="res://property/powered_by_water/PoweredByWater.gd" type="Script" id=4]
+[ext_resource path="res://property/powered_by_wind/PoweredByWind.gd" type="Script" id=5]
+[ext_resource path="res://property/powered_by_lightning/PoweredByLightning.tscn" type="PackedScene" id=6]
 
 [node name="PoweredByFire" type="Node2D"]
 script = ExtResource( 1 )
-mix_with = ExtResource( 4 )
+mix_with_water = ExtResource( 4 )
 air_power_scn = ExtResource( 3 )
+mix_with_air = ExtResource( 5 )
+lightning_power_scn = ExtResource( 6 )
 flames_scn = ExtResource( 2 )

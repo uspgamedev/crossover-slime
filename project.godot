@@ -74,6 +74,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://property/powered_by_fire/PoweredByFire.gd"
 }, {
+"base": "Property",
+"class": "PoweredByLightning",
+"language": "GDScript",
+"path": "res://property/powered_by_lightning/PoweredByLightning.gd"
+}, {
+"base": "Property",
+"class": "PoweredByWater",
+"language": "GDScript",
+"path": "res://property/powered_by_water/PoweredByWater.gd"
+}, {
 "base": "Node2D",
 "class": "Property",
 "language": "GDScript",
@@ -108,6 +118,8 @@ _global_script_class_icons={
 "Movable": "",
 "PoweredByEarth": "",
 "PoweredByFire": "",
+"PoweredByLightning": "",
+"PoweredByWater": "",
 "Property": "",
 "Stage": "",
 "Steppable": "",
@@ -124,7 +136,6 @@ config/icon="res://entity/slime/player/slime-pink-front.png"
 
 window/size/width=1280
 window/size/height=720
-window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
