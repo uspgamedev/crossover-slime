@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://entity/Entity.tscn" type="PackedScene" id=1]
 [ext_resource path="res://property/movable/Movable.gd" type="Script" id=2]
+[ext_resource path="res://property/steppable/Steppable.gd" type="Script" id=3]
+[ext_resource path="res://property/gravity/Gravity.gd" type="Script" id=4]
+[ext_resource path="res://property/heavy/Heavy.gd" type="Script" id=5]
 
 [node name="Rock" instance=ExtResource( 1 )]
+sprite_path = NodePath("Polygon2D")
 
 [node name="Polygon2D" type="Polygon2D" parent="." index="0"]
 position = Vector2( -5.29732, 0.529724 )
@@ -12,3 +16,13 @@ polygon = PoolVector2Array( -17.9826, -12.5735, -19.5718, 1.72925, -12.6853, 10.
 
 [node name="Movable" type="Node2D" parent="." index="1"]
 script = ExtResource( 2 )
+
+[node name="Steppable" type="Node2D" parent="." index="2"]
+script = ExtResource( 3 )
+
+[node name="Heavy" type="Node2D" parent="." index="3"]
+script = ExtResource( 5 )
+
+[node name="Gravity" type="Node2D" parent="." index="4"]
+script = ExtResource( 4 )
+falls_in_pits = true

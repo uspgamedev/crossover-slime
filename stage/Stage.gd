@@ -6,6 +6,8 @@ const FLOODFILL_DELAY := 0.1
 export var player_path := NodePath()
 export var map_path := NodePath()
 
+signal won
+
 func tick_entities():
 	if not Engine.editor_hint:
 		for node in get_children():
@@ -16,6 +18,9 @@ func _process(delta):
 	for node in get_children():
 		if node is Entity:
 			node._process_entity($Map, delta)
+
+func win():
+	emit_signal("won")
 
 func get_player() -> Entity:
 	return get_node_or_null(player_path) as Entity
@@ -29,6 +34,14 @@ func get_entity_at(tile: Vector2) -> Entity:
 			if node.tile == tile:
 				return node
 	return null
+
+func get_all_entities_at(tile: Vector2) -> Array:
+	var result := []
+	for node in get_tree().get_nodes_in_group(Entity.GROUP):
+		if node is Entity:
+			if node.tile == tile:
+				result.append(node)
+	return result
 
 func apply_effect(entity: Entity, effect: Dictionary):
 	match effect:

@@ -6,6 +6,7 @@
 [ext_resource path="res://property/gravity/Gravity.gd" type="Script" id=4]
 
 [node name="Slime" instance=ExtResource( 1 )]
+sprite_path = NodePath("Sprite")
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 scale = Vector2( 0.1, 0.1 )

@@ -1,4 +1,10 @@
-extends Property
+class_name PoweredByWater extends Property
+
+export var mix_with_fire: Script
+export var air_power_scn: PackedScene
+
+export var mix_with_earth: Script
+export var wood_power_scn: PackedScene
 
 export var squirt_scn: PackedScene
 
@@ -22,3 +28,8 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				type = "splash",
 				at = target_tile
 			})
+		{ "type": "gain_power", "power": var power }:
+			if power is mix_with_fire:
+				effect.power = air_power_scn.instance()
+			elif power is mix_with_earth:
+				effect.power = wood_power_scn.instance()

@@ -8,4 +8,5 @@ func _handle_effect(_stage: Stage, entity: Entity, effect: Dictionary):
 			if current_power != null:
 				current_power.free()
 			current_power = power
-			entity.add_child(current_power)
+			if power != null:
+				entity.add_child(power)
