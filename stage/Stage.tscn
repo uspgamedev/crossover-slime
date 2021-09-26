@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://stage/Stage.gd" type="Script" id=1]
 [ext_resource path="res://vfx/Flames.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://stage/tiles.png" type="Texture" id=4]
 [ext_resource path="res://stage/Map.gd" type="Script" id=5]
 [ext_resource path="res://stage/tile-grass-64.png" type="Texture" id=6]
+[ext_resource path="res://stage/tile-spike-64.png" type="Texture" id=7]
 
 [sub_resource type="TileSet" id=1]
 1/name = "shallow_pit"
@@ -106,6 +107,20 @@
 7/shape_one_way_margin = 0.0
 7/shapes = [  ]
 7/z_index = 0
+8/name = "spike"
+8/texture = ExtResource( 7 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
 
 [node name="Stage" type="YSort"]
 script = ExtResource( 1 )

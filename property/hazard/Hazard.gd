@@ -2,8 +2,17 @@ class_name Hazard extends Property
 
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 	match effect:
-		{ "type": "collide", "with": var other, .. }:
-			if other.has_property(PoweredByEarth):
-				effect.blocked = false
-			else:
-				print_debug("ouchie!")
+		{ "type": "tick" }:
+			if not entity.is_moving():
+				var tile_type := stage.get_map().get_tile_type(entity.tile)
+				if tile_type in Map.SPIKE_TILES:
+					if not entity.has_property(PoweredByEarth):
+						entity.queue_free()
+					else:
+						pass
+						# TODO effect against spikes
+				if tile_type in Map.WATER_TILES:
+					if entity.has_property(PoweredByEarth):
+						entity.queue_free()
+					elif entity.has_property(PoweredByFire):
+						entity.queue_free()
