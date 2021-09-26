@@ -25,5 +25,5 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 					type = "burn"
 				})
 		{ "type": "gain_power", "power": var power }:
-			if power is PoweredByWater:
+			if power is mix_with:
 				effect.power = air_power_scn.instance()
