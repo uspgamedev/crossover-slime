@@ -22,7 +22,10 @@ func _handle_effect(_stage: Stage, entity: Entity, effect: Dictionary):
 				burning = true
 				var map := _stage.get_map()
 				var bonfire := bonfire_scn.instance() as Node2D
-				bonfire.duration = flammability + fuel
+				if fuel > 0:
+					bonfire.duration = flammability + fuel
+				else:
+					bonfire.duration = -1
 				bonfire.global_position = 	map.map_to_world(entity.tile) \
 											+ map.cell_size as Vector2 / 2.0
 				_stage.add_child(bonfire)
@@ -33,5 +36,6 @@ func _handle_effect(_stage: Stage, entity: Entity, effect: Dictionary):
 						_stage.apply_effect(target_entity, {
 							type = "burn"
 						})
-				yield(get_tree().create_timer(fuel), "timeout")
-				entity.queue_free()
+				if fuel > 0:
+					yield(get_tree().create_timer(fuel), "timeout")
+					entity.queue_free()

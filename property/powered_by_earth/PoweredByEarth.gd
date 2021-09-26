@@ -1,4 +1,4 @@
 class_name PoweredByEarth extends Property
 
-func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
+func _handle_effect(_stage: Stage, _entity: Entity, _effect: Dictionary):
 	pass
