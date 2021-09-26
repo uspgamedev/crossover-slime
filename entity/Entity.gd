@@ -9,6 +9,7 @@ export var sprite_path := NodePath()
 export var SMOOTH := 6
 
 var sunk := false
+var osc := 0.0
 
 var dirty := false
 var target_pos: Vector2
@@ -47,6 +48,13 @@ func animate_movement(map: TileMap, delta: float):
 		else:
 			sprite.position.y = 0
 			z_index = 1
+		if 		not sunk and map.get_tile_type(tile) in Map.WATER_TILES \
+			and	not is_moving():
+				osc += delta
+				sprite.position.y = 4 * sin(osc * TAU)
+				osc = fmod(osc, 1)
+		else:
+			osc = 0.0
 
 func apply_effect(stage: Node, effect: Dictionary):
 	var children := get_children()

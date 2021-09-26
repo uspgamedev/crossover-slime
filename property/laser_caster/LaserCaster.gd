@@ -21,8 +21,8 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				if block != null:
 					if 		block.has_property(Fagocitosis) \
 						and not block.is_moving():
-							block.queue_free()
-					if not block.sunk:
+							stage.apply_effect(block, { type = "die" } )
+					elif not (block.sunk or block.is_moving()):
 						break
 				if map.get_tile_type(target_tile) in Map.WALL_TILES:
 					break

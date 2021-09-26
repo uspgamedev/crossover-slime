@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=9 format=2]
+[gd_resource type="SpriteFrames" load_steps=10 format=2]
 
 [ext_resource path="res://entity/slime/earth_slime/slime-earth-front-idle-1.png" type="Texture" id=1]
 [ext_resource path="res://entity/slime/earth_slime/slime-earth-side1-idle-1.png" type="Texture" id=2]
@@ -8,12 +8,13 @@
 [ext_resource path="res://entity/slime/earth_slime/slime-earth-back-idle-1.png" type="Texture" id=6]
 [ext_resource path="res://entity/slime/earth_slime/slime-earth-back-idle-2.png" type="Texture" id=7]
 [ext_resource path="res://entity/slime/earth_slime/slime-earth-side2-idle-1.png" type="Texture" id=8]
+[ext_resource path="res://entity/slime/earth_slime/slime-eath-dead.png" type="Texture" id=9]
 
 [resource]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "idle_down",
+"name": "idle_up",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 8 ) ],
@@ -21,13 +22,18 @@ animations = [ {
 "name": "idle_left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "idle_up",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "idle_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle_down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "rip",
 "speed": 5.0
 } ]

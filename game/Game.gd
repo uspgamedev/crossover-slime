@@ -13,8 +13,15 @@ func _physics_process(_delta):
 		move_player()
 
 func _clear_stage():
-	current_stage.queue_free()
+	var stage := current_stage
 	current_stage = null
+	$Tween.interpolate_property(
+		stage, "position", Vector2.ZERO, Vector2.DOWN * 1000, 0.5,
+		Tween.TRANS_BACK, Tween.EASE_IN
+	)
+	$Tween.start()
+	yield($Tween, "tween_all_completed")
+	stage.queue_free()
 
 func move_player():
 	var player := current_stage.get_player()
@@ -28,12 +35,18 @@ func move_player():
 			current_stage.apply_effect(player, { type = "move", dir = move_dir })
 
 func _process(_delta):
-	if current_stage == null:
+	if current_stage == null and not $Tween.is_active():
 		if next_stage_idx >= stages.size():
 			get_tree().quit()
 			return
 		var stage_scn := stages[next_stage_idx] as PackedScene
 		current_stage = stage_scn.instance()
+		current_stage.position = Vector2.UP * 1000
+		$Tween.interpolate_property(
+			current_stage, "position", Vector2.UP * 1000, Vector2.ZERO, 1.0,
+			Tween.TRANS_BOUNCE, Tween.EASE_OUT
+		)
+		$Tween.start()
 		#warning-ignore:return_value_discarded
 		current_stage.connect("won", self, "_clear_stage")
 		#warning-ignore:return_value_discarded
