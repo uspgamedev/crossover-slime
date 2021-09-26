@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://game/Game.tscn" type="PackedScene" id=1]
-[ext_resource path="res://stage/stage17/Stage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://stage/stage18/Stage.tscn" type="PackedScene" id=2]
 
 [node name="Game" instance=ExtResource( 1 )]
 stages = [ ExtResource( 2 ) ]
