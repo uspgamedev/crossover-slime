@@ -84,16 +84,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://property/powered_by_lightning/PoweredByLightning.gd"
 }, {
-"base": "Property",
-"class": "PoweredByWater",
-"language": "GDScript",
-"path": "res://property/powered_by_water/PoweredByWater.gd"
-}, {
-"base": "Property",
-"class": "PoweredByWind",
-"language": "GDScript",
-"path": "res://property/powered_by_wind/PoweredByWind.gd"
-}, {
 "base": "Node2D",
 "class": "Property",
 "language": "GDScript",
@@ -130,8 +120,6 @@ _global_script_class_icons={
 "PoweredByEarth": "",
 "PoweredByFire": "",
 "PoweredByLightning": "",
-"PoweredByWater": "",
-"PoweredByWind": "",
 "Property": "",
 "Stage": "",
 "Steppable": "",
