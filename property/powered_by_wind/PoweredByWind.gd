@@ -1,9 +1,12 @@
-extends Property
+class_name PoweredByWind extends Property
 
 export var gust_scn: PackedScene
 
 export var mix_with_fire: Script
 export var lightning_power_scn: PackedScene
+
+export var mix_with_water: Script
+export var cloud_power_scn: PackedScene
 
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 	match effect:
@@ -28,3 +31,5 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 		{ "type": "gain_power", "power": var power }:
 			if power is mix_with_fire:
 				effect.power = lightning_power_scn.instance()
+			if power is mix_with_water:
+				effect.power = cloud_power_scn.instance()

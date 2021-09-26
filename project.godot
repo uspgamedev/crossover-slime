@@ -65,6 +65,11 @@ _global_script_classes=[ {
 "path": "res://property/movable/Movable.gd"
 }, {
 "base": "Property",
+"class": "PoweredByCloud",
+"language": "GDScript",
+"path": "res://property/powered_by_cloud/PoweredByCloud.gd"
+}, {
+"base": "Property",
 "class": "PoweredByEarth",
 "language": "GDScript",
 "path": "res://property/powered_by_earth/PoweredByEarth.gd"
@@ -83,6 +88,11 @@ _global_script_classes=[ {
 "class": "PoweredByWater",
 "language": "GDScript",
 "path": "res://property/powered_by_water/PoweredByWater.gd"
+}, {
+"base": "Property",
+"class": "PoweredByWind",
+"language": "GDScript",
+"path": "res://property/powered_by_wind/PoweredByWind.gd"
 }, {
 "base": "Node2D",
 "class": "Property",
@@ -116,10 +126,12 @@ _global_script_class_icons={
 "Heavy": "",
 "Map": "",
 "Movable": "",
+"PoweredByCloud": "",
 "PoweredByEarth": "",
 "PoweredByFire": "",
 "PoweredByLightning": "",
 "PoweredByWater": "",
+"PoweredByWind": "",
 "Property": "",
 "Stage": "",
 "Steppable": "",
