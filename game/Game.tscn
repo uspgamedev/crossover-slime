@@ -12,3 +12,5 @@ __meta__ = {
 }
 
 [node name="HUD" parent="." instance=ExtResource( 2 )]
+
+[node name="Tween" type="Tween" parent="."]

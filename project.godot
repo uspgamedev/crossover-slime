@@ -165,7 +165,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Slime Puzzle"
-run/main_scene="res://game/test_01/Game.tscn"
+run/main_scene="res://game/mainGame/Game.tscn"
 config/icon="res://entity/slime/player/slime-pink-front.png"
 
 [display]
