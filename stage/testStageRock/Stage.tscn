@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://stage/Stage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/slime/air_slime/AirSlime.tscn" type="PackedScene" id=2]
@@ -7,143 +7,106 @@
 [ext_resource path="res://entity/slime/fire_slime/FireSlime.tscn" type="PackedScene" id=5]
 [ext_resource path="res://entity/slime/earth_slime/EarthSlime.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entity/trunk/Trunk.tscn" type="PackedScene" id=7]
-[ext_resource path="res://entity/spike/Spike.tscn" type="PackedScene" id=8]
 [ext_resource path="res://entity/exit/Exit.tscn" type="PackedScene" id=9]
 
 [node name="Stage" instance=ExtResource( 1 )]
 player_path = NodePath("Player")
 
 [node name="Map" parent="." index="0"]
-tile_data = PoolIntArray( -65536, 4, 0, -65535, 4, 0, -65534, 4, 0, -65533, 4, 0, -65532, 4, 0, -65531, 4, 0, -65530, 4, 0, -65529, 4, 0, -65528, 4, 0, -65527, 4, 0, -65526, 4, 0, -65525, 4, 0, -65524, 4, 0, -65523, 4, 0, 0, 4, 0, 1, 4, 0, 2, 0, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 65536, 4, 0, 65537, 4, 0, 65538, 0, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 5, 0, 65543, 5, 0, 65544, 5, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 0, 0, 65549, 4, 0, 65550, 4, 0, 65551, 4, 0, 65552, 4, 0, 65553, 4, 0, 65554, 4, 0, 65555, 4, 0, 131072, 4, 0, 131073, 4, 0, 131074, 0, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 6, 0, 131079, 6, 0, 131080, 6, 0, 131081, 4, 0, 131082, 4, 0, 131083, 4, 0, 131084, 0, 0, 131085, 4, 0, 131086, 4, 0, 131087, 4, 0, 131088, 4, 0, 131089, 4, 0, 131090, 4, 0, 131091, 4, 0, 196608, 4, 0, 196609, 4, 0, 196610, 0, 0, 196611, 4, 0, 196612, 4, 0, 196613, 4, 0, 196614, 6, 0, 196615, 6, 0, 196616, 6, 0, 196617, 4, 0, 196618, 4, 0, 196619, 4, 0, 196620, 0, 0, 196621, 4, 0, 196622, 4, 0, 196623, 4, 0, 196624, 4, 0, 196625, 4, 0, 196626, 4, 0, 196627, 4, 0, 262144, 4, 0, 262145, 4, 0, 262146, 0, 0, 262147, 4, 0, 262148, 4, 0, 262149, 4, 0, 262150, 6, 0, 262151, 6, 0, 262152, 6, 0, 262153, 4, 0, 262154, 4, 0, 262155, 4, 0, 262156, 0, 0, 262157, 4, 0, 262158, 4, 0, 262159, 4, 0, 262160, 4, 0, 262161, 4, 0, 262162, 4, 0, 262163, 4, 0, 327680, 4, 0, 327681, 4, 0, 327682, 0, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 6, 0, 327687, 6, 0, 327688, 6, 0, 327689, 4, 0, 327690, 4, 0, 327691, 4, 0, 327692, 0, 0, 327693, 4, 0, 327694, 4, 0, 327695, 4, 0, 327696, 4, 0, 327697, 4, 0, 327698, 4, 0, 327699, 4, 0, 393216, 4, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 0, 393233, 0, 0, 393234, 0, 0, 393235, 4, 0, 458752, 4, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 4, 0, 458769, 4, 0, 458770, 0, 0, 458771, 4, 0, 524288, 4, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 4, 0, 589824, 4, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 4, 0, 655360, 4, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0, 655371, 4, 0, 655372, 4, 0, 655373, 4, 0, 655374, 4, 0, 655375, 4, 0, 655376, 4, 0, 655377, 4, 0, 655378, 4, 0, 655379, 4, 0 )
+tile_data = PoolIntArray( -65536, 4, 0, -65535, 4, 0, -65534, 4, 0, -65533, 4, 0, -65532, 4, 0, -65531, 4, 0, -65530, 4, 0, -65529, 4, 0, -65528, 4, 0, -65527, 4, 0, -65526, 4, 0, -65525, 4, 0, -65524, 4, 0, -65523, 4, 0, 0, 15, 0, 1, 15, 0, 2, 15, 0, 3, 15, 0, 4, 15, 0, 5, 7, 0, 6, 7, 0, 7, 7, 0, 8, 7, 0, 9, 7, 0, 10, 7, 0, 11, 7, 0, 12, 7, 0, 13, 15, 0, 14, 15, 0, 15, 15, 0, 16, 15, 0, 17, 15, 0, 18, 15, 0, 19, 15, 0, 65536, 15, 0, 65537, 15, 0, 65538, 16, 0, 65539, 15, 0, 65540, 15, 0, 65541, 12, 0, 65542, 12, 0, 65543, 12, 0, 65544, 12, 0, 65545, 12, 0, 65546, 12, 0, 65547, 15, 0, 65548, 7, 0, 65549, 15, 0, 65550, 15, 0, 65551, 15, 0, 65552, 15, 0, 65553, 15, 0, 65554, 15, 0, 65555, 15, 0, 131072, 15, 0, 131073, 15, 0, 131074, 7, 0, 131075, 15, 0, 131076, 15, 0, 131077, 13, 0, 131078, 13, 0, 131079, 13, 0, 131080, 13, 0, 131081, 13, 0, 131082, 13, 0, 131083, 15, 0, 131084, 7, 0, 131085, 15, 0, 131086, 15, 0, 131087, 15, 0, 131088, 15, 0, 131089, 15, 0, 131090, 15, 0, 131091, 15, 0, 196608, 15, 0, 196609, 15, 0, 196610, 14, 0, 196611, 15, 0, 196612, 15, 0, 196613, 13, 0, 196614, 13, 0, 196615, 13, 0, 196616, 13, 0, 196617, 13, 0, 196618, 13, 0, 196619, 15, 0, 196620, 7, 0, 196621, 15, 0, 196622, 16, 0, 196623, 16, 0, 196624, 16, 0, 196625, 16, 0, 196626, 16, 0, 196627, 16, 0, 262144, 15, 0, 262145, 15, 0, 262146, 14, 0, 262147, 15, 0, 262148, 15, 0, 262149, 13, 0, 262150, 13, 0, 262151, 13, 0, 262152, 13, 0, 262153, 13, 0, 262154, 13, 0, 262155, 15, 0, 262156, 7, 0, 262157, 15, 0, 262158, 12, 0, 262159, 12, 0, 262160, 7, 0, 262161, 7, 0, 262162, 7, 0, 262163, 7, 0, 327680, 16, 0, 327681, 16, 0, 327682, 14, 0, 327683, 16, 0, 327684, 16, 0, 327685, 13, 0, 327686, 13, 0, 327687, 13, 0, 327688, 13, 0, 327689, 13, 0, 327690, 13, 0, 327691, 16, 0, 327692, 7, 0, 327693, 16, 0, 327694, 7, 0, 327695, 7, 0, 327696, 15, 0, 327697, 15, 0, 327698, 7, 0, 327699, 15, 0, 393216, 7, 0, 393217, 7, 0, 393218, 7, 0, 393219, 7, 0, 393220, 7, 0, 393221, 7, 0, 393222, 7, 0, 393223, 7, 0, 393224, 7, 0, 393225, 7, 0, 393226, 7, 0, 393227, 7, 0, 393228, 7, 0, 393229, 7, 0, 393230, 7, 0, 393231, 7, 0, 393232, 16, 0, 393233, 16, 0, 393234, 7, 0, 393235, 15, 0, 458752, 7, 0, 458753, 7, 0, 458754, 7, 0, 458755, 7, 0, 458756, 7, 0, 458757, 7, 0, 458758, 7, 0, 458759, 7, 0, 458760, 7, 0, 458761, 7, 0, 458762, 7, 0, 458763, 7, 0, 458764, 7, 0, 458765, 7, 0, 458766, 7, 0, 458767, 7, 0, 458768, 14, 0, 458769, 14, 0, 458770, 7, 0, 458771, 15, 0, 524288, 7, 0, 524289, 7, 0, 524290, 7, 0, 524291, 7, 0, 524292, 7, 0, 524293, 7, 0, 524294, 7, 0, 524295, 7, 0, 524296, 7, 0, 524297, 7, 0, 524298, 7, 0, 524299, 7, 0, 524300, 7, 0, 524301, 7, 0, 524302, 7, 0, 524303, 7, 0, 524304, 14, 0, 524305, 14, 0, 524306, 7, 0, 524307, 15, 0, 589824, 7, 0, 589825, 7, 0, 589826, 7, 0, 589827, 7, 0, 589828, 7, 0, 589829, 7, 0, 589830, 7, 0, 589831, 7, 0, 589832, 7, 0, 589833, 7, 0, 589834, 7, 0, 589835, 7, 0, 589836, 7, 0, 589837, 7, 0, 589838, 7, 0, 589839, 7, 0, 589840, 15, 0, 589841, 15, 0, 589842, 15, 0, 589843, 15, 0, 655360, 7, 0, 655361, 7, 0, 655362, 7, 0, 655363, 7, 0, 655364, 7, 0, 655365, 7, 0, 655366, 7, 0, 655367, 7, 0, 655368, 7, 0, 655369, 7, 0, 655370, 7, 0, 655371, 7, 0, 655372, 7, 0, 655373, 7, 0, 655374, 7, 0, 655375, 7, 0, 655376, 16, 0, 655377, 16, 0, 655378, 16, 0, 655379, 16, 0 )
 
 [node name="Player" parent="." index="3" instance=ExtResource( 4 )]
 position = Vector2( 544, 608 )
 tile = Vector2( 8, 9 )
 
-[node name="Spike" parent="." index="4" instance=ExtResource( 8 )]
-position = Vector2( 160, 96 )
-tile = Vector2( 2, 1 )
-
-[node name="Spike2" parent="." index="5" instance=ExtResource( 8 )]
-position = Vector2( 160, 160 )
-tile = Vector2( 2, 2 )
-
-[node name="Spike4" parent="." index="6" instance=ExtResource( 8 )]
-position = Vector2( 160, 224 )
-tile = Vector2( 2, 3 )
-
-[node name="Spike5" parent="." index="7" instance=ExtResource( 8 )]
-position = Vector2( 160, 288 )
-tile = Vector2( 2, 4 )
-
-[node name="Spike6" parent="." index="8" instance=ExtResource( 8 )]
-position = Vector2( 160, 352 )
-tile = Vector2( 2, 5 )
-
-[node name="EarthSlime" parent="." index="9" instance=ExtResource( 6 )]
+[node name="EarthSlime" parent="." index="4" instance=ExtResource( 6 )]
 position = Vector2( 96, 608 )
 tile = Vector2( 1, 9 )
 
-[node name="AirSlime" parent="." index="10" instance=ExtResource( 2 )]
+[node name="AirSlime" parent="." index="5" instance=ExtResource( 2 )]
 position = Vector2( 480, 32 )
 tile = Vector2( 7, 0 )
 
-[node name="EarthSlime2" parent="." index="11" instance=ExtResource( 6 )]
+[node name="EarthSlime2" parent="." index="6" instance=ExtResource( 6 )]
 position = Vector2( 224, 608 )
 tile = Vector2( 3, 9 )
 
-[node name="FireSlime" parent="." index="12" instance=ExtResource( 5 )]
+[node name="FireSlime" parent="." index="7" instance=ExtResource( 5 )]
 position = Vector2( 672, 32 )
 tile = Vector2( 10, 0 )
 
-[node name="Trunk3" parent="." index="13" instance=ExtResource( 7 )]
+[node name="Trunk3" parent="." index="8" instance=ExtResource( 7 )]
 position = Vector2( 736, 32 )
 tile = Vector2( 11, 0 )
 
-[node name="Trunk4" parent="." index="14" instance=ExtResource( 7 )]
+[node name="Trunk4" parent="." index="9" instance=ExtResource( 7 )]
 position = Vector2( 800, 32 )
 tile = Vector2( 12, 0 )
 
-[node name="Trunk5" parent="." index="15" instance=ExtResource( 7 )]
+[node name="Trunk5" parent="." index="10" instance=ExtResource( 7 )]
 position = Vector2( 800, 96 )
 tile = Vector2( 12, 1 )
 
-[node name="Trunk6" parent="." index="16" instance=ExtResource( 7 )]
+[node name="Trunk6" parent="." index="11" instance=ExtResource( 7 )]
 position = Vector2( 800, 160 )
 tile = Vector2( 12, 2 )
 
-[node name="Trunk7" parent="." index="17" instance=ExtResource( 7 )]
+[node name="Trunk7" parent="." index="12" instance=ExtResource( 7 )]
 position = Vector2( 800, 224 )
 tile = Vector2( 12, 3 )
 
-[node name="Trunk8" parent="." index="18" instance=ExtResource( 7 )]
+[node name="Trunk8" parent="." index="13" instance=ExtResource( 7 )]
 position = Vector2( 800, 288 )
 tile = Vector2( 12, 4 )
 
-[node name="Trunk9" parent="." index="19" instance=ExtResource( 7 )]
+[node name="Trunk9" parent="." index="14" instance=ExtResource( 7 )]
 position = Vector2( 800, 352 )
 tile = Vector2( 12, 5 )
 
-[node name="Rock" parent="." index="20" instance=ExtResource( 3 )]
+[node name="Rock" parent="." index="15" instance=ExtResource( 3 )]
 position = Vector2( 800, 416 )
 tile = Vector2( 12, 6 )
 
-[node name="Trunk10" parent="." index="21" instance=ExtResource( 7 )]
-position = Vector2( 1120, 416 )
-tile = Vector2( 17, 6 )
+[node name="Trunk10" parent="." index="16" instance=ExtResource( 7 )]
+position = Vector2( 1120, 288 )
+tile = Vector2( 17, 4 )
 
-[node name="Trunk12" parent="." index="22" instance=ExtResource( 7 )]
-position = Vector2( 1056, 416 )
-tile = Vector2( 16, 6 )
+[node name="Trunk12" parent="." index="17" instance=ExtResource( 7 )]
+position = Vector2( 1056, 288 )
+tile = Vector2( 16, 4 )
 
-[node name="Trunk11" parent="." index="23" instance=ExtResource( 7 )]
-position = Vector2( 1184, 416 )
-tile = Vector2( 18, 6 )
+[node name="Trunk11" parent="." index="18" instance=ExtResource( 7 )]
+position = Vector2( 1184, 288 )
+tile = Vector2( 18, 4 )
 
-[node name="Spike3" parent="." index="24" instance=ExtResource( 8 )]
-position = Vector2( 1056, 544 )
-tile = Vector2( 16, 8 )
+[node name="Exit" parent="." index="19" instance=ExtResource( 9 )]
+position = Vector2( 160, 160 )
+tile = Vector2( 2, 2 )
 
-[node name="Spike11" parent="." index="25" instance=ExtResource( 8 )]
-position = Vector2( 1120, 544 )
-tile = Vector2( 17, 8 )
+[node name="AirSlime2" parent="." index="20" instance=ExtResource( 2 )]
+position = Vector2( 1184, 544 )
+tile = Vector2( 18, 8 )
 
-[node name="Spike12" parent="." index="26" instance=ExtResource( 8 )]
-position = Vector2( 1120, 608 )
-tile = Vector2( 17, 9 )
-
-[node name="Spike10" parent="." index="27" instance=ExtResource( 8 )]
-position = Vector2( 1056, 608 )
-tile = Vector2( 16, 9 )
-
-[node name="Exit" parent="." index="28" instance=ExtResource( 9 )]
-position = Vector2( 160, 32 )
-tile = Vector2( 2, 0 )
-
-[node name="AirSlime2" parent="." index="29" instance=ExtResource( 2 )]
-position = Vector2( 1184, 608 )
-tile = Vector2( 18, 9 )
-
-[node name="Rock2" parent="." index="30" instance=ExtResource( 3 )]
+[node name="Rock2" parent="." index="21" instance=ExtResource( 3 )]
 position = Vector2( 160, 416 )
 tile = Vector2( 2, 6 )
 
-[node name="Trunk2" parent="." index="31" instance=ExtResource( 7 )]
+[node name="Trunk2" parent="." index="22" instance=ExtResource( 7 )]
 position = Vector2( 96, 416 )
 tile = Vector2( 1, 6 )
 
-[node name="Trunk13" parent="." index="32" instance=ExtResource( 7 )]
+[node name="Trunk13" parent="." index="23" instance=ExtResource( 7 )]
 position = Vector2( 96, 480 )
 tile = Vector2( 1, 7 )
 
-[node name="Trunk14" parent="." index="33" instance=ExtResource( 7 )]
+[node name="Trunk14" parent="." index="24" instance=ExtResource( 7 )]
 position = Vector2( 160, 480 )
 tile = Vector2( 2, 7 )
 
-[node name="Trunk15" parent="." index="34" instance=ExtResource( 7 )]
+[node name="Trunk15" parent="." index="25" instance=ExtResource( 7 )]
 position = Vector2( 224, 480 )
 tile = Vector2( 3, 7 )
 
-[node name="Trunk16" parent="." index="35" instance=ExtResource( 7 )]
+[node name="Trunk16" parent="." index="26" instance=ExtResource( 7 )]
 position = Vector2( 224, 416 )
 tile = Vector2( 3, 6 )
