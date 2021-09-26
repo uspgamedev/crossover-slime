@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://stage/Stage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entity/slime/player/Player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://entity/slime/earth_slime/EarthSlime.tscn" type="PackedScene" id=10]
 [ext_resource path="res://entity/laser/Laser.tscn" type="PackedScene" id=11]
 [ext_resource path="res://entity/laser/LaserDown.tscn" type="PackedScene" id=12]
+[ext_resource path="res://entity/Entity.gd" type="Script" id=13]
 
 [node name="Stage" instance=ExtResource( 1 )]
 player_path = NodePath("Player")
@@ -69,8 +70,11 @@ tile = Vector2( 11, 5 )
 position = Vector2( 224, 96 )
 tile = Vector2( 3, 1 )
 
-[node name="LaserDown" parent="." index="12" instance=ExtResource( 12 )]
+[node name="LaserDown" parent="." index="12" groups=[
+"entity",
+] instance=ExtResource( 12 )]
 position = Vector2( 96, 160 )
+script = ExtResource( 13 )
 tile = Vector2( 1, 2 )
 
 [node name="Player" parent="." index="13" instance=ExtResource( 2 )]
