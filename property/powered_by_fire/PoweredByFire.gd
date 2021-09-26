@@ -1,5 +1,7 @@
-extends Property
+class_name PoweredByFire extends Property
 
+export var mix_with: Script
+export var air_power_scn: PackedScene
 export var flames_scn: PackedScene
 
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
@@ -22,3 +24,6 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				stage.apply_effect(target_entity, {
 					type = "burn"
 				})
+		{ "type": "gain_power", "power": var power }:
+			if power is PoweredByWater:
+				effect.power = air_power_scn.instance()
