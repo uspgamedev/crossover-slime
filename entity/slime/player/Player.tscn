@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://entity/slime/Slime.tscn" type="PackedScene" id=1]
 [ext_resource path="res://property/hazard/Hazard.gd" type="Script" id=2]
@@ -102,6 +102,59 @@ tracks/4/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="Animation" id=4]
+resource_name = "rippester stalone"
+length = 0.5
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.01, 0.01 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.02 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "rip" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -45.0 ]
+}
+
 [sub_resource type="Animation" id=3]
 loop = true
 tracks/0/type = "value"
@@ -134,13 +187,13 @@ SMOOTH = 8
 
 [node name="Sprite" parent="." index="0"]
 modulate = Color( 1, 1, 1, 0.980195 )
-rotation = 0.0155546
 animation = "rip"
 frame = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 anims/hop = SubResource( 1 )
 anims/ripperino = SubResource( 2 )
+"anims/rippester stalone" = SubResource( 4 )
 anims/standard = SubResource( 3 )
 script = ExtResource( 6 )
 

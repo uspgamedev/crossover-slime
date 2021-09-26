@@ -12,3 +12,11 @@ func _handle_effect(_stage: Stage, entity: Entity, effect: Dictionary):
 			anim.play("ripperino")
 			yield(anim, "animation_finished")
 			entity.queue_free()
+		{ "type": "fall" }:
+			var anim := get_node(animation_path) as AnimationPlayer
+			for child in entity.get_children():
+				if child.get_script() in [Movable, FacingDirection]:
+					child.queue_free()
+			anim.play("rippester stalone")
+			yield(anim, "animation_finished")
+			entity.queue_free()
