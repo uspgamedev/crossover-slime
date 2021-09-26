@@ -31,4 +31,5 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 							+ map.cell_size as Vector2 / 2.0
 			var offset := target_pos - entity.position
 			offset -= DIRS[dir] as Vector2 * map.cell_size.x / 2
+			$Laser.points[0] = DIRS[dir] as Vector2 * map.cell_size.x / 2
 			$Laser.points[1] = offset
