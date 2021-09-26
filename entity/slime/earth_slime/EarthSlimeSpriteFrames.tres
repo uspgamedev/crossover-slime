@@ -12,14 +12,9 @@
 
 [resource]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "idle_up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "idle_left",
+"name": "idle_down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
@@ -27,9 +22,14 @@ animations = [ {
 "name": "idle_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "idle_down",
+"name": "idle_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "idle_up",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
