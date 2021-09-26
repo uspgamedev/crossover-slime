@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=9 format=2]
+[gd_resource type="SpriteFrames" load_steps=10 format=2]
 
 [ext_resource path="res://entity/slime/water_slime/slime-water-front-idle-1.png" type="Texture" id=1]
 [ext_resource path="res://entity/slime/water_slime/slime-water-side1-idle-1.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://entity/slime/water_slime/slime-water-front-idle-2.png" type="Texture" id=6]
 [ext_resource path="res://entity/slime/water_slime/slime-water-side2-idle-1.png" type="Texture" id=7]
 [ext_resource path="res://entity/slime/water_slime/slime-water-side2-idle-2.png" type="Texture" id=8]
+[ext_resource path="res://entity/slime/water_slime/slime-water-dead.png" type="Texture" id=9]
 
 [resource]
 animations = [ {
@@ -29,5 +30,10 @@ animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "idle_down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "rip",
 "speed": 5.0
 } ]

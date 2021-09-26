@@ -17,7 +17,7 @@ func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 				var tile_type := stage.get_map().get_tile_type(entity.tile)
 				if tile_type in Map.DEEP_PIT_TILES:
 					# TODO dying nimation
-					entity.queue_free()
+					stage.apply_effect(entity, { type = "fall" } )
 				elif tile_type in Map.SHALLOW_PIT_TILES and falls_in_pits:
 					entity.sunk = true
 				else:
