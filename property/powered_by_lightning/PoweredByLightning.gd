@@ -5,7 +5,7 @@ export var zap_scn: PackedScene
 func _handle_effect(stage: Stage, entity: Entity, effect: Dictionary):
 	match effect:
 		{ "type": "use_power" }:
-			$AudioStreamPlayer2D.play()
+			$AudioStreamPlayer.play()
 			var check_dir := {
 				type = "check_dir", dir = Vector2.DOWN
 			}
