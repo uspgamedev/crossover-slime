@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://DJ.gd" type="Script" id=1]
 [ext_resource path="res://bgm/Slime-Water.mp3" type="AudioStream" id=2]
@@ -16,13 +16,14 @@
 [ext_resource path="res://sfx/sfx_transform_wind.mp3" type="AudioStream" id=14]
 [ext_resource path="res://sfx/sfx_transform_wood.mp3" type="AudioStream" id=15]
 [ext_resource path="res://sfx/sfx_transform_earth.mp3" type="AudioStream" id=16]
+[ext_resource path="res://sfx/sfx_transform_cloud.mp3" type="AudioStream" id=17]
 
 [node name="DJ" type="Node"]
 script = ExtResource( 1 )
 
 [node name="songs" type="Node" parent="."]
 
-[node name="base" type="AudioStreamPlayer" parent="songs"]
+[node name="NONE" type="AudioStreamPlayer" parent="songs"]
 stream = ExtResource( 3 )
 volume_db = -15.0
 
@@ -32,7 +33,7 @@ volume_db = -15.0
 
 [node name="FIRE" type="AudioStreamPlayer" parent="songs"]
 stream = ExtResource( 4 )
-volume_db = -15.0
+volume_db = -18.0
 
 [node name="WIND" type="AudioStreamPlayer" parent="songs"]
 stream = ExtResource( 5 )
@@ -60,7 +61,7 @@ volume_db = -15.0
 
 [node name="sfx" type="Node" parent="."]
 
-[node name="base" type="AudioStreamPlayer" parent="sfx"]
+[node name="NONE" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource( 11 )
 
 [node name="WATER" type="AudioStreamPlayer" parent="sfx"]
@@ -73,7 +74,7 @@ stream = ExtResource( 12 )
 stream = ExtResource( 14 )
 
 [node name="CLOUD" type="AudioStreamPlayer" parent="sfx"]
-stream = ExtResource( 14 )
+stream = ExtResource( 17 )
 
 [node name="LIGHTNING" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource( 13 )

@@ -62,6 +62,6 @@ func _input(event):
 		var player := current_stage.get_player()
 		if player != null and not player.is_moving():
 			current_stage.apply_effect(player, { type = "use_power" })
-	if event.is_action_pressed("retry_stage"):
+	if not $Tween.is_active() and event.is_action_pressed("retry_stage"):
 		_clear_stage()
 		next_stage_idx -= 1

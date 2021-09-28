@@ -1,6 +1,5 @@
 extends Node
 
-onready var debug = $debug
 onready var sfx_list = $sfx
 onready var songs_list = $songs
 
@@ -27,7 +26,7 @@ func _ready():
 	for s in sfx_list.get_children():
 		sfx[str(s.name)] = s
 		
-	play("base")
+	play("NONE")
 
 
 func stop():
@@ -46,32 +45,30 @@ func play(name: String, from: float = 0.0):
 		print_debug("Song \'" + name + "\' not found")
 
 
-func play_with_cross_fade(name: String, duration: float = 0.5):
+func play_with_cross_fade(name: String, fade_out: float = 1.0, fade_in: float = 1.0):
 	if songs[name]:
 		next = name
 		
 		if current && next == current: return
 		
 		$TweenCrossCurr.interpolate_method(songs[current], "set_volume_db",
-			songs[current].get_volume_db(), -80, duration, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT, duration)
+			songs[current].get_volume_db(), -80, fade_out, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT, fade_out)
 		$TweenCrossNext.interpolate_method(songs[next], "set_volume_db",
-			-80, default_volumes[next], duration, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			-80, default_volumes[next], fade_in, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		$TweenCrossCurr.start()
 		$TweenCrossNext.start()
 		
 		songs[next].play(songs[current].get_playback_position())
-		print_debug(current, next)
+		current = next
 	else:
 		print_debug("Song \'" + name + "\' not found")
 
 
 func _on_TweenCrossCurr_tween_completed(_object, _key):
-	songs[current].stop()
+	_object.stop()
 	# songs[current].set_volume_db(default_volumes[current])
-	
-	current = next
-	
-	
+
+
 func play_sfx(name: String):
 	if sfx.has(name):
 		sfx[name].play()

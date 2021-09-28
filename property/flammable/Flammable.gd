@@ -1,10 +1,10 @@
 class_name Flammable extends Property
 
 # time it takes to spread flames
-export var flammability := 1
+export var flammability := 1.0
 
 # time until object completely burns
-export var fuel := 2
+export var fuel := 2.0
 onready var bonfire_scn = preload("res://vfx/Bonfire.tscn")
 var burning = false
 

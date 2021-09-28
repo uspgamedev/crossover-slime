@@ -282,12 +282,14 @@ animation_path = NodePath("../AnimationPlayer")
 
 [node name="fall" type="AudioStreamPlayer2D" parent="." index="8"]
 stream = ExtResource( 10 )
+volume_db = -5.0
 
 [node name="hop" type="AudioStreamPlayer2D" parent="." index="9"]
 stream = ExtResource( 8 )
 
 [node name="ded" type="AudioStreamPlayer2D" parent="." index="10"]
 stream = ExtResource( 9 )
+volume_db = -5.0
 pitch_scale = 1.5
 
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_animation_finished"]

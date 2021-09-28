@@ -11,5 +11,5 @@ dest_files=[ "res://.import/sfx_burn.mp3-b81472246226c2111bad8b0ed10769ad.mp3str
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0.0
